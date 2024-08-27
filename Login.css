@@ -1,0 +1,305 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Container{
+    width:  100%;
+    height: 100%;
+    /* height: 500px; */
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* flex-direction: column; */
+    font-family: calibri;
+}
+.LeftWrapper{
+    width: 30%;
+    height: 100%;
+    background-image: url(./Unicoz/images/20\ MISSION\ ~\ FASHION\ EDITORIAL\ -\ Caro\'s\ Editorial.jfif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.LeftWrapper1{
+    width: 30%;
+    height: 100%;
+    background-image: url(./Unicoz/images/Baddie\ 24th\ birthday\ Studio\ shoot.jfif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.LeftWrapper img{
+    cursor: pointer;
+}
+.Wrapper{
+  width: 70%;
+}
+.RightWrapper{
+    width: 600px;
+    height: 450px;
+    /* border: 1px solid rgba(0, 0, 0, 0.384); */
+    border-radius: 6px;
+    /* background-color: lawngreen; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.LogoImg{
+    font-size: 30px;
+    margin-right: 250px;
+    /* margin-left: 120px; */
+    font-weight: bold;
+    font-style: italic;
+}
+.Logo{
+    display: none;
+}
+.Inner{
+    width: 600px;
+    height: 350px;
+    /* border: 1px solid rgba(0, 0, 0, 0.384); */
+    border-radius: 6px;
+    /* background-color: lawngreen; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.Email{
+    display: flex;
+    flex-direction: column;
+}
+.Email b{
+    font-size: 17px;
+}
+.Email input{
+    width: 330px;
+    height: 40px;
+    padding: 0 10px;
+    margin-top: 10px;
+}
+.Password{
+    display: flex;
+    flex-direction: column;
+}
+.Password b{
+    font-size: 17px;
+}
+.Password input{
+    width: 330px;
+    height: 40px;
+    padding: 0 10px;
+    margin-top: 10px;
+}
+.login{
+    padding: 13px 157px;
+    font-weight: bold;
+    font-size: 17px;
+    background-color: #B0D0D3;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.login1{
+    padding: 13px 115px;
+    font-weight: bold;
+    font-size: 17px;
+    background-color: #B0D0D3;
+    border: none;
+    border-radius: 3px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.CreateAccount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 10px;
+    /* background-color: gold; */
+}
+.CreateAccount span{
+    width: 115px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.384);
+    margin: 10px 10px;
+}
+.Account{
+    padding: 13px 125px;
+    /* padding: 7px 150px; */
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #B0D0D3;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.Account1{
+    padding: 13px 160px;
+    /* padding: 7px 150px; */
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #B0D0D3;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.Account a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+}
+@media (max-width:480px) {
+    .LeftWrapper{
+        display: none;
+    }
+    .LeftWrapper1{
+        display: none;
+    }
+    .Wrapper{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        /* justify-content: center; */
+    }
+    .RightWrapper{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .bold{
+        display: none;
+    }
+    .Logo{
+        display: flex;
+        
+    }
+    .Inner{
+        width: 85%;
+        margin-top: 10px;
+        /* align-items: flex-start; */
+    }
+    .Email{
+        width: 100%;
+    }
+    .Email input{
+        width: 93.5%;;
+    }
+    .Password{
+        width: 100%;
+    }
+    .Password input{
+        width: 93.5%;;
+    }
+    .login{
+        width: 100%;
+        padding: 17px 0;
+    }
+    .login1{
+        width: 100%;
+        padding: 17px 0;
+    }
+    .CreateAccount span{
+        width: 36%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.384);
+        /* margin: 10px 10px; */
+        margin: 0px 7px;
+    }
+    .CreateAccount{
+        width: 100%;
+        font-size: 13px;
+        text-align: center;
+    }
+    .Account{
+        width: 100%;
+        padding: 17px 0;
+    }
+    .Account1{
+        width: 100%;
+        padding: 17px 0;
+    }
+}
+@media (min-width:480px) and (max-width:768px) {
+    .LeftWrapper{
+        display: none;
+    }
+    .LeftWrapper1{
+        display: none;
+    }
+    .Wrapper{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        /* justify-content: center; */
+    }
+    .RightWrapper{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .bold{
+        display: none;
+    }
+    .Logo{
+        display: flex;
+        
+    }
+    .Inner{
+        width: 85%;
+        margin-top: 10px;
+        /* align-items: center; */
+        /* align-items: flex-start; */
+
+    }
+    .Email{
+        /* width: 64%; */
+    }
+    .Email input{
+        width: 330px;
+    }
+    .Password{
+        /* width: 64%; */
+    }
+    .Password input{
+        width: 330px;
+    }
+    .login{
+        width: 350px;
+        padding: 17px 0;
+    }
+    .login1{
+        width: 350px;
+        padding: 17px 0;
+    }
+    .CreateAccount span{
+        width: 200px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.384);
+        margin: 0px 7px;
+    }
+    .CreateAccount{
+         width: 350px;
+        font-size: 13px;
+        text-align: center;
+    }
+    .Account{
+        width: 350px;
+        padding: 17px 0;
+    }
+    .Account1{
+        width: 350px;
+        padding: 17px 0;
+    }
+}
+

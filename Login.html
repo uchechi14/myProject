@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="Login.css">
+    </head>
+    <body>
+        <div class="Container">
+            <div class="LeftWrapper">
+                <a href="index.html"><img src="./Unicoz/LogoandIcons/Nu_F 3.png"></a>
+            </div>
+            <div class="Wrapper">
+                <div class="RightWrapper">
+                <div class="LogoImg">
+                    <b class="bold"> Welcome </b>
+                </div>
+                    <div class="Logo"><a href="index.html"><img src="./Unicoz/LogoandIcons/Slice_2-removebg-preview.png"></a></div>
+                <form class="Inner" id="LoginForm" onsubmit="UserLogin(event)">
+                <div class="Email">
+                    <b>Enter Email or Phone Number</b>
+                    <input type="email" id="loginEmail">
+                </div>
+                <div class="Password">
+                    <b>Enter Password</b>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button class="login">Login</button>
+                <div class="CreateAccount"><span></span>New to DECKS <span></span></div>
+                <!-- <a href="register.html"> <button class="Account">Create Account</button></a> -->
+                </form>
+                <a href="register.html"> <button class="Account">Create Account</button></a>
+        </div>
+            </div>
+        </div>
+        <script src="register.js"></script>
+
+    </body>
+</html>

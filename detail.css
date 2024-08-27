@@ -1,0 +1,667 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    background-color: rgb(248, 248, 248);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: calibri;
+}
+.FirstSection{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #B0D0D3;
+    position: fixed;
+    top: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    /* border-bottom: 1px solid rgba(0, 0, 0, 0.384); */
+}
+.Header{
+    width: 85%;
+    height: 90px;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* margin: auto; */
+}
+.LeftNav{
+    display: flex;
+    /* background-color: aquamarine; */
+}
+.LeftNav ol{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 20px;
+}
+.LeftNav ol li{
+    font-size: 16px;
+    font-weight: 600;
+    font-family: calibri;
+    /* gap: 25px; */
+}
+.LogoNav{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    margin-right: 70px;
+    /* background-color: aquamarine; */
+
+}
+.RightNav{
+    width: 200px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+    /* background-color: aquamarine; */
+
+}
+.iconImg img{
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+}
+.countR{
+    position: relative;
+}
+.cartCount{
+    width: 20px;
+    height: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: black;
+    border-radius: 50px;
+    position: absolute;
+    top: -13px;
+    right: -13px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.HamBurger{
+    width: 25px;
+    height: 25px;
+    display: none;
+    cursor: pointer;
+}
+.HamBurger img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.LeftNav ol li a{
+    text-decoration: none;
+    color: black;
+}
+@media (max-width:768px) {
+    .FirstSection{
+        /* background-color: white; */
+    }
+    .Header{
+        margin: auto;
+    }
+    .LeftNav{
+        width: auto;
+        display: none;
+        height: 100vh;
+        background-color: white;
+        color: black;
+        position: fixed;
+        top: 90px;
+        left: 0;
+    }
+    .LeftNav ol {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        padding-top: 30px;
+    }
+    .LeftNav ol li{
+        text-align: left;
+        width: 90%;
+        padding-left: 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.418);
+    }
+    .LogoNav{
+        /* width: auto; */
+        margin-left: 50px;
+    }
+    .RightNav{
+        width: auto;
+    }
+    .iconImg{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .HamBurger{
+        display: flex;
+    }
+    #Nav.open{
+        display: flex;
+    }
+}
+
+.detailContainer{
+    width: 85%;
+    /* height: 100vh; */
+    /* background-color: rebeccapurple; */
+    display: flex;
+    justify-content: center;
+    margin-top: 110px;
+    background-color: white;
+    padding: 15px 0;
+    border-radius: 3px;
+}
+.detailWrapper{
+    width: 97%;
+    /* background-color: forestgreen; */
+    display: flex;
+    justify-content: center;
+}
+.leftSide{
+    width: 60%;
+    background-color: white;
+    display: flex;
+}
+.bigImage{
+    width: 480px;
+    height: 500px;
+}
+.bigImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.smallImage{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.imag1{
+    width: 180px;
+    height: 160px;
+}
+.smallImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.rightSide{
+    width: 50%;
+    /* background-color: pink; */
+    display: flex;
+    justify-content: flex-end;
+}
+.detailSide{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* background-color: aliceblue; */
+}
+.nameP{
+    display: flex;
+    flex-direction: column;
+}
+.nameP h1{
+    margin-left: -5px;
+}
+.nameP b{
+    font-size: 25px;
+}
+.detail{
+    font-size: 17px;
+}
+.invite{
+    width: 100%;
+    height: 80px;
+    /* background-color: olive; */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.increament{
+    width: 150px;
+    height: 60px;
+    background-color: black;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border-radius: 6px;
+}
+.increament p{
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+.Sign{
+    width: 45px;
+    height: 45px;
+}
+.Sign img{
+    width: 100%;
+    height: 100%;
+    /* background-color: black; */
+    object-fit: cover;
+}
+.invite button{
+    width: 150px;
+    height: 60px;
+    background-color: #B0D0D3;
+    border-radius: 6px;
+    border: none;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.invite button:hover{
+    background-color: rgb(34, 34, 34);
+    color: white;
+}
+.like{
+    width: 50px;
+    height: 50px;
+}
+.like img{
+    width: 100%;
+    height: 100%;
+    /* background-color: black; */
+    object-fit: cover;
+}
+.categories{
+    font-size: 17px;
+    margin-top: 50px;
+}
+.socialMedia{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.socialMedia p{
+    font-size: 23px;
+    font-weight: bold;
+}
+.iconsMedia{
+    display: flex;
+    gap: 10px;
+}
+.iM{
+    width: 25px;
+    height: 25px;
+}
+.iM img{
+    width: 100%;
+    height: 100%;
+    /* background-color: black; */
+    object-fit: cover;
+}
+@media (max-width:480px) {
+    .detailWrapper{
+        flex-direction: column;
+        width: 90%;
+    }
+        
+    .leftSide{
+        width: 100%;
+        flex-direction: column;
+    }
+    .smallImage{
+        width: 100%;
+        height: 100px;
+        flex-direction: row;
+        gap: 5px;
+        margin-top: 20px;
+        /* background-color: red; */
+        justify-content: space-between;
+    }
+    .imag1 img{
+        width: 30%;
+        height: 100px;
+        margin-top: 60px;
+        object-fit: cover;
+    }
+    .bigImage{
+        width: 100%;
+        height: 300px;
+    }
+    .bigImage img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    } 
+    .smallImage img{
+        width: 100%;
+        height: 100px;
+        object-fit: cover;
+    }
+    .rightSide{
+        width: 100%;
+        margin-top: 10px;
+    }
+    .detailSide{
+        width: 100%;
+    }
+    .nameP{
+
+    }
+   .nameP h1{
+    width: 100%;
+    margin-left: 0px;
+    /* background-color: aqua; */
+    font-size: 35px;
+    }
+    .invite{
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .categories{
+        width: 100%;
+    }
+}
+@media (min-width:481px) and (max-width:768px) {
+    .detailWrapper{
+        flex-direction: column;
+        width: 90%;
+    }
+        
+    .leftSide{
+        width: 100%;
+        flex-direction: column;
+    }
+    .smallImage{
+        width: 100%;
+        height: 100px;
+        flex-direction: row;
+        gap: 5px;
+        margin-top: 20px;
+        /* background-color: red; */
+        justify-content: space-between;
+    }
+    .imag1 img{
+        width: 30%;
+        height: 100px;
+        margin-top: 60px;
+        object-fit: cover;
+    }
+    .bigImage{
+        width: 100%;
+        height: 300px;
+    }
+    .bigImage img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    } 
+    .smallImage img{
+        width: 100%;
+        height: 100px;
+        object-fit: cover;
+    }
+    .rightSide{
+        width: 100%;
+        margin-top: 10px;
+    }
+    .detailSide{
+        width: 100%;
+    }
+    .nameP{
+
+    }
+   .nameP h1{
+    width: 100%;
+    margin-left: 0px;
+    font-size: 35px;
+    }
+    .invite{
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .categories{
+        width: 100%;
+    }
+
+}
+@media (min-width:481px) and(max-width:768px) {
+    
+}
+
+
+
+.LastSection{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    border-top: 1px solid rgb(160, 156, 156);
+     padding: 20px 0px;
+}
+.LastWrapper{
+    width: 80%;
+    margin-top: 30px;
+    display: flex;
+    /* justify-content: space-around; */
+    gap: 27px;
+    flex-wrap: wrap;
+}
+.First{
+    width: 200px;
+    height: 200px;
+}
+.First b{
+    font-size: 20px;
+    border-bottom: 1px solid black;
+}
+.First p{
+    font-size: 17px;
+    margin-top: 10px;
+    font-weight: 500;
+    color: rgb(155, 151, 151);
+}
+.First:nth-child(2) p:hover{
+    color: black;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.First:nth-child(3) p:hover{
+    color: black;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+ .socialMediaIcons{
+    width: 150px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+ .Icons{
+    width: 25px;
+    height: 25px;
+ }
+ .Icons img{
+    width: 100%;
+    height: 100%;
+ }
+.EmailInput{
+    width: 200px;
+    height: 55px;
+    margin-top: 10px;
+}
+.EmailInput input{
+    width: 200px;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 3px;
+    border: 1px solid black;
+}
+.Logo{
+    width: 130px;
+    height: 50px;
+}
+.Logo:nth-child(1){
+    margin-top: -15px;
+    margin-left: -30px;
+}
+.Logo:last-child{
+    width: 100px;
+    height: 40px;
+    margin-top: 0;
+    margin-left: 0;
+    /* background-color: lawngreen; */
+}
+.Logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.First button{
+    padding: 10px 25px;
+    border-radius: 3px;
+    border: none;
+    background-color: #B0D0D3;
+    font-weight: bold;
+}
+.FooterBottom{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid rgb(160, 156, 156);
+}
+.FooterWrap{
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.Leftbottom{
+    /* width: 50%; */
+    display: flex;
+    font-size: 15px;
+}
+.FooterLogo{
+    width: 65px;
+    height: 45px;
+}
+.FooterLogo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-top: -15px;
+}
+.Rightbottom{
+    display: flex;
+    gap: 17px;
+}
+.Rightbottom p{
+    font-size: 17px;
+    font-weight: 500;
+    color: rgb(155, 151, 151);
+}
+.Rightbottom p:hover{
+    color: black;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+@media (max-width:480px) {
+    .FooterWrap{
+        align-items: center;
+        flex-direction: column;
+    }
+    .Leftbottom{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: center;
+        gap: 0; */
+    }
+    .Rightbottom{
+        width: 60%;
+        margin-top: 15px;
+        justify-content: space-between;
+        padding-bottom: 10px;
+    }
+}
+@media (max-width:480px) {
+    .LastWrapper{
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .FooterWrap{
+        align-items: center;
+        flex-direction: column;
+    }
+    .Leftbottom{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: center;
+        gap: 0; */
+    }
+    .Rightbottom{
+        width: 60%;
+        margin-top: 15px;
+        justify-content: space-between;
+        padding-bottom: 10px;
+    }
+}
+@media (min-width:481px) and (max-width:768px) {
+    .LastWrapper{
+    justify-content: center;
+    margin-top: 10px;
+    display: flex;
+    /* gap: 20px; */
+}
+.First:nth-child(1){
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.First:nth-child(1) p{
+    width: 200px;
+}
+.First:nth-child(2){
+    width: 150px;
+    /* display: flex; */
+}
+.First:nth-child(3){
+    width: 150px;
+    margin-left: 20px;
+    /* display: flex; */
+}
+    .FooterWrap{
+        align-items: center;
+        flex-direction: column;
+    }
+    .Leftbottom{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: center;
+        gap: 0; */
+    }
+    .Rightbottom{
+        width: 60%;
+        margin-top: 15px;
+        justify-content: space-between;
+        padding-bottom: 10px;
+    }
+}
+
+
