@@ -38,7 +38,7 @@
             <div class="detailWrapper">
                 <div class="leftSide">
                     <div class="bigImage">
-                        <img src="./Unicoz/images/cat_3.jpg">
+                        <img src="./Unicoz/images/cat_7.jpg">
                     </div>
                     <div class="smallImage">
                         <div class="imag1">
@@ -138,6 +138,23 @@
         </div>
         </div>
 
-        <script src="script.js"></script>
+       
     </body>
+
+    <script src="script.js">
+        function getCart() {
+            let display = JSON.parse(localStorage.getItem("productHolder")) || []
+                    return display
+                }
+                function saveCart(display) {
+                    localStorage.setItem("productHolder", JSON.stringify(display))
+                }
+                function cartCount() {
+                    const countNumber = getCart()
+                    const totalQuantity = countNumber.reduce((acc, item) => acc + item.quantity, 0)
+                    document.getElementById("cartCount").textContent = totalQuantity
+                    console.log(totalQuantity, "quantity")
+                }
+                document.addEventListener("DOMContentLoaded", cartCount)
+                </script>
 </html>

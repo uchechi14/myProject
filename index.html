@@ -30,7 +30,7 @@
            <div class="iconImg">
             <div class="countR">
             <a href="cart.html"> <img src="./Unicoz/LogoandIcons/shopping-cart.png" alt="">
-                <div class="cartCount"></div>
+                <div class="cartCount" id="cartCount"></div>
             </a>
             </div>
         </div>
@@ -311,6 +311,36 @@
         </div>
         </div>
 
-        <script src="script.js"></script>
     </body>
+
+    
+    <script>
+        const burgerToggle = () =>{
+    const hamBurger = document.getElementById("Nav")
+    hamBurger.classList.toggle("open")
+}
+document.getElementById("HamBurger").addEventListener("click", burgerToggle)
+
+const closeToggle = () =>{
+    const Close = document.getElementById("Nav")
+    Close.classList.toggle("open")
+}
+document.getElementById("cancel").addEventListener("click", closeToggle)
+
+
+function getCart() {
+    let display = JSON.parse(localStorage.getItem("productHolder")) || []
+            return display
+        }
+        function saveCart(display) {
+            localStorage.setItem("productHolder", JSON.stringify(display))
+        }
+        function cartCount() {
+            const countNumber = getCart()
+            const totalQuantity = countNumber.reduce((acc, item) => acc + item.quantity, 0)
+            document.getElementById("cartCount").textContent = totalQuantity
+            console.log(totalQuantity, "quantity")
+        }
+        document.addEventListener("DOMContentLoaded", cartCount)
+    </script>
 </html>

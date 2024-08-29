@@ -150,179 +150,452 @@ body{
         display: flex;
     }
 }
-
-
-.LastSection{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 35px;
-    border-top: 1px solid rgb(160, 156, 156);
-     padding: 20px 0px;
-}
-.LastWrapper{
-    width: 80%;
-    margin-top: 30px;
-    display: flex;
-    justify-content: space-between;
-    gap: 27px;
-    flex-wrap: wrap;
-}
-.First{
-    width: 200px;
-    height: 200px;
-}
-.First b{
-    font-size: 20px;
-    border-bottom: 1px solid black;
-}
-.First p{
-    font-size: 17px;
-    margin-top: 10px;
-    font-weight: 500;
-    color: rgb(155, 151, 151);
-}
-.First:nth-child(2) p:hover{
-    color: black;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-}
-.First:nth-child(3) p:hover{
-    color: black;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-}
- .socialMediaIcons{
-    width: 150px;
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
- }
- .Icons{
-    width: 25px;
-    height: 25px;
- }
- .Icons img{
-    width: 100%;
-    height: 100%;
- }
-.EmailInput{
-    width: 200px;
-    height: 55px;
-    margin-top: 10px;
-}
-.EmailInput input{
-    width: 200px;
-    height: 40px;
-    padding: 0 10px;
-    border-radius: 3px;
-    border: 1px solid black;
-}
-.Logo{
-    width: 130px;
-    height: 50px;
-}
-.Logo:nth-child(1){
-    margin-top: -15px;
-    margin-left: -30px;
-}
-.Logo:last-child{
-    width: 100px;
-    height: 40px;
-    margin-top: 0;
-    margin-left: 0;
-    /* background-color: lawngreen; */
-}
-.Logo img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.First button{
-    padding: 10px 25px;
-    border-radius: 3px;
-    border: none;
-    background-color: #B0D0D3;
-    font-weight: bold;
-}
-.FooterBottom{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    border-top: 1px solid rgb(160, 156, 156);
-}
-.FooterWrap{
-    width: 85%;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 15px;
-}
-.Leftbottom{
-    /* width: 50%; */
-    display: flex;
-    font-size: 15px;
-}
-.FooterLogo{
-    width: 65px;
-    height: 45px;
-}
-.FooterLogo img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    margin-top: -15px;
-}
-.Rightbottom{
-    display: flex;
-    gap: 17px;
-}
-.Rightbottom p{
-    font-size: 17px;
-    font-weight: 500;
-    color: rgb(155, 151, 151);
-}
-.Rightbottom p:hover{
-    color: black;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-}
-@media (max-width:480px) {
-    .FooterWrap{
+    .SecondSection{
+        width: 100%;
+        /* background-color: aqua; */
+        display: flex;
+        justify-content: center;
+        margin-top: 75px;
+    }
+    .SecondWrapper{
+        width: 85%;
+       margin-top: 50px;
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: space-between;
+       /* background-color: white; */
+    }
+    .inputInformation{
+        width: 71%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* gap: 20px; */
+        border-radius: 3px;
+        padding-bottom: 50px ;
+        background-color: white;
+        /* background-color: rgb(117, 42, 42); */
+      
+    }
+    .personalDetail{
+        width: 95%;
+        display: flex;
+        gap: 10px;
+        justify-content: space-around;
+        /* justify-content: space-around; */
+        margin-top: 20px;
+        /* background-color: chartreuse; */
+    }
+    .inputDetail{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .inputDetail input{
+        width: 93%;
+        height: 45px;
+        padding:  0px 10px;
+        border-radius: 6px;
+        border: 1px solid rgb(160, 156, 156);
+    }
+    .inputDetail input::placeholder{
+        color: black;
+    }
+    .inputDetail select{
+        width: 98%;
+        height: 50px;
+        border-radius: 6px;
+        
+    }
+    .inputDetail b{
+        font-size: 20px;
+    }
+    .submit{
+        width: 30%;
+        height: 50px;
+        border-radius: 6px;
+        border: none;
+        background-color: #B0D0D3;
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 10px;
+        position: relative;
+         top: 20px;
+         left: 0px;
+        /* margin-left: 500px; */
+    }
+    .submit:hover{
+        background-color: rgb(34, 34, 34);
+        color: white;
+    }
+    .TotalPrice{
+        width: 27%;
+        height: 180px;
+        border-radius: 3px;
+        display: flex;
         align-items: center;
         flex-direction: column;
+        border: 1px solid rgb(160, 156, 156); 
+        background-color: white;
+    }
+    .amount{
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+        border-bottom: 1px solid rgb(160, 156, 156); 
+        padding:13px 0px;
+    }
+    .amount:nth-child(3){
+        border-bottom: none;
+    }
+    .amount span{
+        display: flex;
+        justify-content: center;
+    }
+    .TotalPrice span{
+        font-size: 25px;
+        display: flex;
+        font-weight: bold;
+    }
+    .TotalPrice div{
+        font-size: 23px;
+        font-weight: bold;
+    }
+    .TotalPrice button{
+        width: 90%;
+        height: 50px;
+        border-radius: 6px;
+        border: none;
+        background-color: #B0D0D3;
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+    .TotalPrice button:hover{
+        background-color: rgb(34, 34, 34);
+        color: white;
+    }
+    @media (max-width:480px) {
+        .SecondWrapper{
+            justify-content: center;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .inputInformation{
+            width: 100%;
+            align-items: center;
+            flex-direction: column;
+        }
+        .personalDetail{
+            width: 90%;
+            gap: 15px;
+            flex-direction: column;
+        }
+        .inputDetail input{
+            width: 87%;
+        }
+        .inputDetail select{
+            width: 95%;
+        }
+        .TotalPrice{
+            width: 100%;
+        }
+        .TotalPrice button{
+            width: 90%;
+            height: 50px;
+        }
+        .submit{
+            width: 60%;
+            height: 50px;
+        }
+        
+    }
+    @media (min-width:481px) and (max-width:768px){
+        .SecondWrapper{
+            flex-direction: column;
+            gap: 30px;
+        }
+        .inputInformation{
+            width: 100%;
+            flex-direction: column;
+        }
+        .personalDetail{
+            width: 85%;
+            gap: 15px;
+            flex-direction: column;
+        }
+        .inputDetail input{
+            width: 100%;
+        }
+        .inputDetail select{
+            width: 106%;
+        }
+        .TotalPrice{
+            width: 400px;
+        }
+        .TotalPrice button{
+            width: 350px;
+            height: 70;
+        }
+        .submit{
+            width: 40%;
+            height: 50px;
+        }
+    }
+    @media (min-width:769px) and (max-width:1024px){
+        .SecondWrapper{
+            flex-direction: column;
+            gap: 30px;
+        }
+        .inputInformation{
+            width: 100%;
+            flex-direction: column;
+        }
+        .personalDetail{
+            width: 94%;
+            gap: 15px;
+            /* background-color: lawngreen; */
+            /* flex-direction: column; */
+        }
+        .inputDetail {
+            width: 100%;
+        }
+        .inputDetail input{
+            width: 90%;
+        }
+        .inputDetail select{
+            width: 98%;
+        }
+        .TotalPrice{
+            width: 400px;
+        }
+        .TotalPrice button{
+            width: 350px;
+            height: 70;
+        }
+    }
+
+
+    .LastSection{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 35px;
+        border-top: 1px solid rgb(160, 156, 156);
+         padding: 20px 0px;
+    }
+    .LastWrapper{
+        width: 80%;
+        margin-top: 30px;
+        display: flex;
+        /* justify-content: space-around; */
+        gap: 27px;
+        flex-wrap: wrap;
+    }
+    .First{
+        width: 200px;
+        height: 200px;
+    }
+    .First b{
+        font-size: 20px;
+        border-bottom: 1px solid black;
+    }
+    .First p{
+        font-size: 17px;
+        margin-top: 10px;
+        font-weight: 500;
+        color: rgb(155, 151, 151);
+    }
+    .First:nth-child(2) p:hover{
+        color: black;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+    }
+    .First:nth-child(3) p:hover{
+        color: black;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+    }
+     .socialMediaIcons{
+        width: 150px;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+     }
+     .Icons{
+        width: 25px;
+        height: 25px;
+     }
+     .Icons img{
+        width: 100%;
+        height: 100%;
+     }
+    .EmailInput{
+        width: 200px;
+        height: 55px;
+        margin-top: 10px;
+    }
+    .EmailInput input{
+        width: 200px;
+        height: 40px;
+        padding: 0 10px;
+        border-radius: 3px;
+        border: 1px solid black;
+    }
+    .Logo{
+        width: 130px;
+        height: 50px;
+    }
+    .Logo:nth-child(1){
+        margin-top: -15px;
+        margin-left: -30px;
+    }
+    .Logo:last-child{
+        width: 100px;
+        height: 40px;
+        margin-top: 0;
+        margin-left: 0;
+        /* background-color: lawngreen; */
+    }
+    .Logo img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .First button{
+        padding: 10px 25px;
+        border-radius: 3px;
+        border: none;
+        background-color: #B0D0D3;
+        font-weight: bold;
+    }
+    .FooterBottom{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        border-top: 1px solid rgb(160, 156, 156);
+    }
+    .FooterWrap{
+        width: 85%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
     }
     .Leftbottom{
+        /* width: 50%; */
+        display: flex;
+        font-size: 15px;
+    }
+    .FooterLogo{
+        width: 65px;
+        height: 45px;
+    }
+    .FooterLogo img{
         width: 100%;
-        flex-direction: column;
-        align-items: center;
-        /* justify-content: center;
-        gap: 0; */
+        height: 100%;
+        object-fit: cover;
+        margin-top: -15px;
     }
     .Rightbottom{
-        width: 60%;
-        margin-top: 15px;
-        justify-content: space-between;
-        padding-bottom: 10px;
+        display: flex;
+        gap: 17px;
     }
-}
-@media (min-width:481px) and (max-width:768px) {
-    .FooterWrap{
-        align-items: center;
-        flex-direction: column;
+    .Rightbottom p{
+        font-size: 17px;
+        font-weight: 500;
+        color: rgb(155, 151, 151);
     }
-    .Leftbottom{
+    .Rightbottom p:hover{
+        color: black;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+    }
+    @media (max-width:480px) {
+        .FooterWrap{
+            align-items: center;
+            flex-direction: column;
+        }
+        .Leftbottom{
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            /* justify-content: center;
+            gap: 0; */
+        }
+        .Rightbottom{
+            width: 60%;
+            margin-top: 15px;
+            justify-content: space-between;
+            padding-bottom: 10px;
+        }
+    }
+    @media (max-width:480px) {
+        .LastWrapper{
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .FooterWrap{
+            align-items: center;
+            flex-direction: column;
+        }
+        .Leftbottom{
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            /* justify-content: center;
+            gap: 0; */
+        }
+        .Rightbottom{
+            width: 60%;
+            margin-top: 15px;
+            justify-content: space-between;
+            padding-bottom: 10px;
+        }
+    }
+    @media (min-width:481px) and (max-width:768px) {
+        .LastWrapper{
+        justify-content: center;
+        margin-top: 10px;
+        display: flex;
+        /* gap: 20px; */
+    }
+    .First:nth-child(1){
         width: 100%;
+        display: flex;
         flex-direction: column;
         align-items: center;
-        /* justify-content: center;
-        gap: 0; */
     }
-    .Rightbottom{
-        width: 60%;
-        margin-top: 15px;
-        justify-content: space-between;
-        padding-bottom: 10px;
+    .First:nth-child(1) p{
+        width: 200px;
     }
-}
-
+    .First:nth-child(2){
+        width: 150px;
+        /* display: flex; */
+    }
+    .First:nth-child(3){
+        width: 150px;
+        margin-left: 20px;
+        /* display: flex; */
+    }
+        .FooterWrap{
+            align-items: center;
+            flex-direction: column;
+        }
+        .Leftbottom{
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            /* justify-content: center;
+            gap: 0; */
+        }
+        .Rightbottom{
+            width: 60%;
+            margin-top: 15px;
+            justify-content: space-between;
+            padding-bottom: 10px;
+        }
+    }

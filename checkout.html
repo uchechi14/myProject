@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Cart Page</title>
+        <title>Checkout Page</title>
         <link rel="stylesheet" href="checkout.css ">
     </head>
     <body>
@@ -36,16 +36,85 @@
 
         <div class="SecondSection">
             <div class="SecondWrapper">
-        <div class="Cart" id="Cart">
-            <h1>Shopping Cart</h1>
-            <div class="cartItem" id="cartItem">  
-            </div>
-        </div>
+                <form class="inputInformation" onsubmit="userDetail(event)">
+                    <div class="personalDetail">
+                    <div class="inputDetail">
+                        <b>First Name</b>
+                        <input type="text" placeholder="Enter First Name"  id="firstName" required>
+                    </div>
+                    <div class="inputDetail">
+                        <b>Last Name</b>
+                        <input type="text" placeholder="Enter Last Name" id="lastName" required>
+                    </div>
+                </div>
+                <div class="personalDetail">
+                    <div class="inputDetail">
+                        <b>State</b>
+                        <select required id="select">
+                            <option disabled selected>--Select State--</option>
+                            <option value="Abia">Abia</option>
+                            <option value="Adamawa">Adamawa</option>
+                            <option value="Akwa Ibom">Akwa Ibom</option>
+                            <option value="Anambra">Anambra</option>
+                            <option value="Bauchi">Bauchi</option>
+                            <option value="Bayelsa">Bayelsa</option>
+                            <option value="Benue">Benue</option>
+                            <option value="Borno">Borno</option>
+                            <option value="Cross River">Cross River</option>
+                            <option value="Delta">Delta</option>
+                            <option value="Ebonyi">Ebonyi</option>
+                            <option value="Edo">Edo</option>
+                            <option value="Ekiti">Ekiti</option>
+                            <option value="Enugu">Enugu</option>
+                            <option value="FCT">Federal Capital Territory</option>
+                            <option value="Gombe">Gombe</option>
+                            <option value="Imo">Imo</option>
+                            <option value="Jigawa">Jigawa</option>
+                            <option value="Kaduna">Kaduna</option>
+                            <option value="Kano">Kano</option>
+                            <option value="Katsina">Katsina</option>
+                            <option value="Kebbi">Kebbi</option>
+                            <option value="Kogi">Kogi</option>
+                            <option value="Kwara">Kwara</option>
+                            <option value="Lagos">Lagos</option>
+                            <option value="Nasarawa">Nasarawa</option>
+                            <option value="Niger">Niger</option>
+                            <option value="Ogun">Ogun</option>
+                            <option value="Ondo">Ondo</option>
+                            <option value="Osun">Osun</option>
+                            <option value="Oyo">Oyo</option>
+                            <option value="Plateau">Plateau</option>
+                            <option value="Rivers">Rivers</option>
+                            <option value="Sokoto">Sokoto</option>
+                            <option value="Taraba">Taraba</option>
+                            <option value="Yobe">Yobe</option>
+                            <option value="Zamfara">Zamfara</option>
+                        </select>
+                    </div>
+                    <div class="inputDetail">
+                        <b>Address</b>
+                        <input type="text" placeholder="Enter house address" required id="address">
+                    </div>
+                </div>
+                <div class="personalDetail">
+                    <div class="inputDetail">
+                        <b>Phone Number</b>
+                        <input type="text" placeholder="Enter Phone Number" id="Phone" required>
+                    </div>
+                    <div class="inputDetail">
+                        <b>Email</b>
+                        <input type="email" placeholder="Enter Email" id="email" required>
+                    </div>
+                </div>
+                <button type="submit" class="submit" >Place Order</button>
+            </form>
         <div class="TotalPrice">
-            <div class="summary">Cart Summary</div>
-           <div class="amount">Total:<span>₦<div id="cartTotal"> 0</div></span></div>
-            <button>Checkout</button>
+            <div class="amount">Cart Summary</div>
+           <div class="amount">Sub-Total:<span>₦<div id="cartTotal"> 0</div></span></div>
+           <div class="amount">Delivery Fee:<span>₦<div id="cartTotal"> 0</div></span></div>
+            <!-- <button type="submit" onclick="placeOrder()">Place Order</button> -->
         </div>
+      
     </div>
     </div>
 
@@ -98,7 +167,66 @@
         </div>
     </div>
     </div>
-
     </body>
+    <script>
+
+            function cartCount() {
+                const countNumber = getCart()
+                const totalQuantity = countNumber.reduce((acc, item) => acc + item.quantity, 0)
+                document.getElementById("cartCount").textContent = totalQuantity
+                console.log(totalQuantity, "quantity")
+            }
+            document.addEventListener("DOMContentLoaded", cartCount)
+
+
+         const burgerToggle = () =>{
+         const hamBurger = document.getElementById("Nav")
+         hamBurger.classList.toggle("open")
+        }
+        document.getElementById("HamBurger").addEventListener("click", burgerToggle)
+
+         const closeToggle = () =>{
+         const Close = document.getElementById("Nav")
+         Close.classList.toggle("open")
+        }
+        document.getElementById("cancel").addEventListener("click", closeToggle)
+
+
+        
+        const userDetail = (event) =>{
+         event.preventDefault()
+    
+                const FirstName = document.getElementById("firstName").value
+                const LastName = document.getElementById("lastName").value
+                const address = document.getElementById("address").value
+                const phoneNumber = document.getElementById("Phone").value
+                const Email = document.getElementById("email").value
+                const State = document.getElementById("select").value
+
+                const userData = {FirstName, LastName, address, phoneNumber, Email, State}
+                localStorage.setItem("userData", JSON.stringify(userData))
+                  
+               alert("Order Placed Successful")
+        }
+        let totalAmount = 0
+        totalAmount += item.price * item.quantity
+
+        cartTotal.innerText = totalAmount.toFixed(2)
+
+        function getCart() {
+            let display = JSON.parse(localStorage.getItem("productHolder")) || []
+                    return display
+                }
+                function saveCart(display) {
+                    localStorage.setItem("productHolder", JSON.stringify(display))
+                }
+                function cartCount() {
+                    const countNumber = getCart()
+                    const totalQuantity = countNumber.reduce((acc, item) => acc + item.quantity, 0)
+                    document.getElementById("cartCount").textContent = totalQuantity
+                    console.log(totalQuantity, "quantity")
+                }
+                document.addEventListener("DOMContentLoaded", cartCount)
+    </script>
 </html>
 

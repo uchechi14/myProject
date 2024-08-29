@@ -32,7 +32,7 @@ document.getElementById("HamBurger").addEventListener("click", burgerToggle)
 // }
 // document.getElementById("DropDown2").addEventListener("click", dropDown2)
 
-function productWarpper() {
+
     
 
 const productHolder = [
@@ -100,7 +100,7 @@ const productHolder = [
         price: 2000,
     },
 ]
-
+function productWarpper() {
 const productContain = document.getElementById("ProductHolder")
 
 productHolder.map(item =>{
@@ -126,7 +126,25 @@ productHolder.map(item =>{
 })
 }
 console.log(productWarpper())
+window.onload =()=>{
+    productWarpper()
+}
 
+
+function getCart() {
+    let display = JSON.parse(localStorage.getItem("productHolder")) || []
+            return display
+        }
+        function saveCart(display) {
+            localStorage.setItem("productHolder", JSON.stringify(display))
+        }
+        function cartCount() {
+            const countNumber = getCart()
+            const totalQuantity = countNumber.reduce((acc, item) => acc + item.quantity, 0)
+            document.getElementById("cartCount").textContent = totalQuantity
+            console.log(totalQuantity, "quantity")
+        }
+        document.addEventListener("DOMContentLoaded", cartCount)
 
 
 // let cartItems = []

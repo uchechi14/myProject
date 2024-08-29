@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Cart Page</title>
-        <link rel="stylesheet" href="file.css">
+        <link rel="stylesheet" href="cart.css">
     </head>
     <body>
         <div class="FirstSection">
@@ -100,25 +100,44 @@
     </div>
 
 
+        </body>
+
+        <script>
 
 
-    <script>
-            // function displayCart() {
+        // document.getElementById("cartCount").textContent = 5
+
+            function getCart() {
         let display = JSON.parse(localStorage.getItem("productHolder")) || []
+                return display
+            }
+            function saveCart(display) {
+                localStorage.setItem("productHolder", JSON.stringify(display))
+            }
+            function cartCount() {
+                const countNumber = getCart()
+                const totalQuantity = countNumber.reduce((acc, item) => acc + item.quantity, 0)
+                document.getElementById("cartCount").textContent = totalQuantity
+                console.log(totalQuantity, "quantity")
+            }
+            document.addEventListener("DOMContentLoaded", cartCount)
+         function displayCart() {
+            let display = getCart()
         console.log("text", display)
        const cartItem = document.getElementById("cartItem")
        const cartTotal = document.getElementById("cartTotal")
 
        let totalAmount = 0
        cartItem.innerHTML = " "
-       display.map(item =>{
+       display.forEach(item =>{
         totalAmount += item.price * item.quantity
         cartItem.innerHTML += `
         <div class="innerCartItem">
         <div class="cartImgHolder"><img src=${item.Image}></div>
         <div class ="detailtextHolder">
-        <p>${item.name}</p>
+        <b>${item.name}</b>
         <b>₦ ${item.price}</b>
+       <div class="delete" onclick = "deleteProduct(${item.id})"><img src="./Unicoz/LogoandIcons/delete-svgrepo-com (3).svg"></div>
         </div>
         </div> <div class ="line"></div>
         `
@@ -126,12 +145,27 @@
        cartTotal.innerText = totalAmount.toFixed(2)
 
        console.log(totalAmount)
-    // }
-    // window.onload = ()=>{
-    //     displayCart()
-    // }
 
+    }
+    window.onload = ()=>{
+        displayCart()
+    }
+
+    function deleteProduct(productId) {
+        let display = getCart()
+        // let display = JSON.parse(localStorage.getItem("productHolder")) || []
+        display = display.filter(item => item.id  !== productId)
+        console.log(display)
+        saveCart(display)
+       displayCart()
+    }
+
+    const burgerToggle = () =>{
+    const hamBurger = document.getElementById("Nav")
+    hamBurger.classList.toggle("open")
+}
+   document.getElementById("HamBurger").addEventListener("click", burgerToggle)
 
     </script>
-    </body>
+
 </html>
