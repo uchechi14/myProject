@@ -105,9 +105,6 @@ body{
     color: black;
 }
 @media (max-width:768px) {
-    .FirstSection{
-        /* background-color: white; */
-    }
     .Header{
         margin: auto;
     }
@@ -529,8 +526,14 @@ body{
     background-color: #B0D0D3;
     font-size: 20px;
     font-weight: bold;
+    cursor: pointer;
 }
-.TotalPrice button:hover{
+.TotalPrice a{
+    width: 90%;
+    height: 50px;
+    
+}
+.TotalPrice a button:hover{
     background-color: rgb(34, 34, 34);
     color: white;
 }
@@ -548,17 +551,14 @@ body{
         text-align: center;
 
     }
-    .cartItem{
-        /* background-color: darkgoldenrod; */
-    }
     .innerCartItem{
         flex-direction: column;
-        align-items: center;
+        /* align-items: center; */
         justify-content: center;
         /* background-color: darkblue; */
     }
     .cartImgHolder{
-        width: 100%;
+        width: 90%;
         height: 200px;
         background-color: white;
         margin-left: 15px;
@@ -650,7 +650,7 @@ body{
     .TotalPrice{
         width: 350px;
     }
-    .TotalPrice button{
+    .TotalPrice button, .TotalPrice a{
         width: 350px;
         height: 70;
     }
@@ -717,7 +717,7 @@ body{
     .TotalPrice{
         width: 350px;
     }
-    .TotalPrice button{
+    .TotalPrice button, .TotalPrice a{
         width: 350px;
         height: 70;
     }
@@ -804,13 +804,6 @@ body{
     width: 100%;
     align-items: center;
     margin-top: 15px;
-}
-.LeftDetail{
-    /* margin-top: 15px; */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: space-between; */
-    /* background-color: firebrick; */
 }
 .LeftDetail p{
     /* background-color: firebrick; */
@@ -926,9 +919,6 @@ body{
         justify-content: center;
         gap: 30px;
         margin-top: 50px;
-    }
-    .Product{
-        /* margin: 50px; */
     }
     .Product:nth-child(1){
         margin-top: 0px;

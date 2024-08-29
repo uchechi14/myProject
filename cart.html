@@ -44,7 +44,7 @@
         <div class="TotalPrice">
             <div class="summary">Cart Summary</div>
            <div class="amount">Total:<span>₦<div id="cartTotal"> 0</div></span></div>
-            <button>Checkout</button>
+           <a href="checkout.html"> <button>Checkout</button></a>
         </div>
     </div>
     </div>
@@ -157,7 +157,7 @@
         display = display.filter(item => item.id  !== productId)
         console.log(display)
         saveCart(display)
-       displayCart()
+        displayCart()
     }
 
     const burgerToggle = () =>{

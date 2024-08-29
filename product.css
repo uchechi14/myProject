@@ -394,6 +394,7 @@ body{
     .boldTexts{
         width: 100%;
         display: flex;
+        justify-content: center;
         /* background-color: white; */
     }
     .ProductHolder{
@@ -428,6 +429,7 @@ body{
     .boldTexts{
         width: 60%;
         display: flex;
+        justify-content: center;
         /* background-color: white; */
     }
     .ProductHolder{

@@ -39,15 +39,15 @@ const productHolder = [
     {
         id: 1,
         Image: "./Unicoz/images/cat_1.jpg",
-        type: "Sneakers",
-        name: "Jacquard Shelt Cloth",
-        price: 2000,
+        type: "bags",
+        name: "Hitman fluffy beanie bag",
+        price: 3000,
     },
     {
         id: 2,
         Image: "./Unicoz/images/cat_2.jpg",
         type: "Sneakers",
-        name: "Jacquard Shelt Cloth",
+        name: "Jacquard Fine Sneakers",
         price: 2000,
     },
     {
@@ -115,10 +115,10 @@ productHolder.map(item =>{
     <p>${item.type}</p>
     </div>
     <div class="RightDetail">
-    <b>J${item.name}</b>
+    <b>${item.name}</b>
     <b>₦ ${item.price}.00</b>
     </div>
-    <button class="cartButton" onclick= "addToCart('${item.Image}', '${item.price}', '${item.name}', '${item.id}')">Add to cart</button>
+    <button class="cartButton" onclick= "addToCart('${item.Image}', '${item.price}', '${item.name}', ${item.id})">Add to cart</button>
     </div>
     `
     productContain.appendChild(Pcards)
@@ -129,28 +129,6 @@ console.log(productWarpper())
 window.onload =()=>{
     productWarpper()
 }
-
-
-function getCart() {
-    let display = JSON.parse(localStorage.getItem("productHolder")) || []
-            return display
-        }
-        function saveCart(display) {
-            localStorage.setItem("productHolder", JSON.stringify(display))
-        }
-        function cartCount() {
-            const countNumber = getCart()
-            const totalQuantity = countNumber.reduce((acc, item) => acc + item.quantity, 0)
-            document.getElementById("cartCount").textContent = totalQuantity
-            console.log(totalQuantity, "quantity")
-        }
-        document.addEventListener("DOMContentLoaded", cartCount)
-
-
-// let cartItems = []
-// console.log(cartItems)
-
-
 
 function addToCart(Image, price, name, id) {
  
@@ -183,53 +161,23 @@ function addToCart(Image, price, name, id) {
         
     }
 
+function getCart() {
+    let display = JSON.parse(localStorage.getItem("productHolder")) || []
+            return display
+        }
+        function saveCart(display) {
+            localStorage.setItem("productHolder", JSON.stringify(display))
+        }
+        function cartCount() {
+            const countNumber = getCart()
+            const totalQuantity = countNumber.reduce((acc, item) => acc + item.quantity, 0)
+            document.getElementById("cartCount").textContent = totalQuantity
+            console.log(totalQuantity, "quantity")
+        }
+        document.addEventListener("DOMContentLoaded", cartCount)
 
 
-// function addToCart(id, price, name) {
-//     const product = {id:id, price:price, name:name, quantity:1}
 
-//     let itemExists = false
-
-//     cartItems.forEach((item)=>{
-//         if(item.id === id){
-//             itemExists.quantity += 1
-//             itemExists = true
-//         }
-//     })
-
-//     if(!itemExists){
-//         cartItems.push(product)
-//     }
-//     updateCart()
-// }
-
-
-// function updateCart(){
-//     const cartList = document.getElementById("cartItems")
-//     cartList.textContent = ""
-
-//     let total = 0
-
-//     cartItems.map((item   )=>{
-//         const list = document.createElement("div")
-//         list.className = "cartItem"
-//         list.innerHTML = `
-//         name: ${item.name} - Quantity:
-//         <button onClick = "decreaseQty(${item.id})"> - </button>
-//         ${item.quantity}
-//         <button onClick = "increaseQty(${item.id})"> + </button>
-//         - Price ${item.price * item.quantity}
-//         `
-
-//         cartList.appendChild(list)
-
-//         total += item.price*item.quantity
-
-//         return list
-//     })
-
-//     document.getElementById("cartTotal").textContent = total.toFixed(2)
-// }
 
 function increaseQty(id) {
     cartItems.map((item) =>{
@@ -270,8 +218,9 @@ function decreaseQtycreaseQty(id) {
 //         return list
 
 //     })
+            // let total = 0   
 
-    document.getElementById("cartTotal").textContent = total.toFixed(2)
+    // document.getElementById("cartTotal").innerHTML = total.toFixed(2)
 
 
 
