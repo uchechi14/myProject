@@ -60,7 +60,7 @@
                     <div class="detailSide">
                         <div class="nameP">
                         <h1>Topman fluffy chunky rib beanie</h1>
-                        <b>₦ 1000.00</b>
+                        <b id="priceTag">₦ 1000.00</b>
                     </div>
                         <div class="detail">A simple product is the most common and easily
                             understandable product type in WooCommerce. A simple product 
@@ -75,7 +75,7 @@
                             <div class="Sign" id="pluSign" onclick="increment()"><img src="./Unicoz/LogoandIcons/plus-svgrepo-com (1).svg"></div>
                             </div>
                             <button onclick= "addToCart('./Unicoz/images/cat_1.jpg', '1000', 'Hitman fluffy beanie bag', 1)">Add to cart</button>
-                            <div class="like"><img src="./Unicoz/LogoandIcons/like-svgrepo-com.svg"></div>
+                            <!-- <div class="like"><img src="./Unicoz/LogoandIcons/like-svgrepo-com.svg"></div> -->
                            </div>
                     <div class="categories">Categories Blazers, Dresses, Lingree
                         Tags clothing, design, kids, men, women.</div>
@@ -181,7 +181,7 @@
 
     
 
-} 
+}
 
     function updateCart() {
         let cart = JSON.parse(localStorage.getItem("productHolder")) || []
@@ -206,26 +206,26 @@
                 }
                 document.addEventListener("DOMContentLoaded", cartCount)
 
-                function increment() {
-            // Get the current value
-            var currentValue = parseInt(document.getElementById('value').innerHTML);
-            
-            // Increment the value
-            var newValue = currentValue + 1;
-            
-            // Update the display
+
+            let currentValue = parseInt(document.getElementById('value').innerHTML); 
+            const valPrice = document.getElementById("priceTag")
+
+            function increment() {
+            let  newValue = ++currentValue;
             document.getElementById('value').innerHTML = newValue;
-        }
+            let newPrice = newValue * 1000  
+            valPrice.innerText = "₦ " + newPrice.toFixed(2)        
+            }
 
             function decrement() {
-
-            var currentValue = parseInt(document.getElementById('value').innerHTML);
-
+            let currentValue = parseInt(document.getElementById('value').innerHTML);
             if(currentValue < 2){
 
             }else{
-            var newValue = currentValue - 1;
+           let newValue = currentValue - 1;
             document.getElementById('value').innerHTML = newValue;
+            let newPrice = newValue * 1000  
+            valPrice.innerText = "₦ " + newPrice.toFixed(2)
             }
             }
                 </script>

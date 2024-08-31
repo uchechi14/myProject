@@ -4,33 +4,15 @@ const burgerToggle = () =>{
     hamBurger.classList.toggle("open")
 }
 document.getElementById("HamBurger").addEventListener("click", burgerToggle)
+const closeToggle = () =>{
+    const Close = document.getElementById("Nav")
+    Close.classList.toggle("open")
+}
+document.getElementById("cancel").addEventListener("click", closeToggle)
 
 
 
-// const closeToggle = () =>{
-//     const Close = document.getElementById("Nav")
-//     Close.classList.toggle("open")
-// }
-// document.getElementById("cancel").addEventListener("click", closeToggle)
 
-
-// new Date().getFullYear()
-
-// const dropDown = () => {
-//     const drop = document.getElementById("Close")
-//     drop.classList.toggle("close")
-// }
-// document.getElementById("DropDown").addEventListener("click", dropDown)
-// const dropDown1 = () => {
-//     const drop = document.getElementById("Close1")
-//     drop.classList.toggle("close")
-// }
-// document.getElementById("DropDown1").addEventListener("click", dropDown1)
-// const dropDown2 = () => {
-//     const drop = document.getElementById("Close2")
-//     drop.classList.toggle("close")
-// }
-// document.getElementById("DropDown2").addEventListener("click", dropDown2)
 
 
     
@@ -40,7 +22,7 @@ const productHolder = [
         id: 1,
         Image: "./Unicoz/images/cat_1.jpg",
         type: "bags",
-        name: "Hitman fluffy beanie bag",
+        name: "Hitman beanie bag",
         price: 3000,
     },
     {
@@ -196,63 +178,25 @@ function decreaseQtycreaseQty(id) {
     updateCart()
 }
 
-// function updateCart() {
-//     const cartList = document.getElementById("cartItems")
-//     cartList.textContent = ""
-
-//     let total = 0
-
-//     cartItems.map((item)=>{
-//         const list = document.createElement("li")
-//         list.innerHTML = `
-//         product name: ${item.name} - Quantity:
-//         <button onClick= "decreaseQty(${item.id})"> - </button>
-//         ${item.quantity}
-//         <button onClick= "increaseQty(${item.id})"> + </button>
-//         - Price ${item.price * item.quantity}
-//         `
-
-//         cartList.appendChild(list)
-//         total += item.price * item.quantity
-
-//         return list
-
-//     })
-            // let total = 0   
-
-    // document.getElementById("cartTotal").innerHTML = total.toFixed(2)
-
-
-
-
-
-
-
-
-
 
 
 
 function increment() {
-    // Get the current value
-    var currentValue = parseInt(document.getElementById('value').innerHTML);
+    let currentValue = parseInt(document.getElementById('value').innerHTML);
     
-    // Increment the value
-    var newValue = currentValue + 1;
-    
-    // Update the display
+    let newValue = currentValue + 1;
     document.getElementById('value').innerHTML = newValue;
   }
 
   
   function decrement() {
 
-    var currentValue = parseInt(document.getElementById('value').innerHTML);
+    let currentValue = parseInt(document.getElementById('value').innerHTML);
 
     if(currentValue < 2){
 
 }else{
-       var newValue = currentValue - 1;
+    let newValue = currentValue - 1;
        document.getElementById('value').innerHTML = newValue;
 }
     }

@@ -11,7 +11,11 @@
                     <img src="./Unicoz/LogoandIcons/hamburger.png">
                 </div>
                 <div class="LeftNav" id="Nav">
+                    <div class="cancel" id="cancel">
+                        <img src="./Unicoz/LogoandIcons/cancel-svgrepo-com.svg">
+                    </div>
                 <ol>
+                  
                     <li><a href="index.html">Home</a></li>
                     <li> <a href="product.html">Shop</a></li>
                     <li><a href="about.html">About Us</a></li>
@@ -25,7 +29,7 @@
                <div class="iconImg"><a href="register.html"><img src="./Unicoz/LogoandIcons/user.png" alt=""></a></div>
                <div class="iconImg">
                 <div class="countR">
-                 <a href="cart.html"> <img src="./Unicoz/LogoandIcons/shopping-cart.png" alt="">
+                <a href="cart.html"> <img src="./Unicoz/LogoandIcons/shopping-cart.png" alt="">
                     <div class="cartCount" id="cartCount"></div>
                 </a>
                 </div>
@@ -33,23 +37,22 @@
             </div>
             </div>
         </div>
-
         <div class="SecondSection">
             <div class="SecondWrapper">
                 <form class="inputInformation" onsubmit="userDetail(event)">
                     <div class="personalDetail">
                     <div class="inputDetail">
-                        <b>First Name</b>
+                        <!-- <b>First Name</b> -->
                         <input type="text" placeholder="Enter First Name"  id="firstName" required>
                     </div>
                     <div class="inputDetail">
-                        <b>Last Name</b>
+                        <!-- <b>Last Name</b> -->
                         <input type="text" placeholder="Enter Last Name" id="lastName" required>
                     </div>
                 </div>
                 <div class="personalDetail">
                     <div class="inputDetail">
-                        <b>State</b>
+                        <!-- <b>State</b> -->
                         <select required id="select">
                             <option disabled selected>--Select State--</option>
                             <option value="Abia">Abia</option>
@@ -92,17 +95,17 @@
                         </select>
                     </div>
                     <div class="inputDetail">
-                        <b>Address</b>
+                        <!-- <b>Address</b> -->
                         <input type="text" placeholder="Enter house address" required id="address">
                     </div>
                 </div>
                 <div class="personalDetail">
                     <div class="inputDetail">
-                        <b>Phone Number</b>
+                        <!-- <b>Phone Number</b> -->
                         <input type="text" placeholder="Enter Phone Number" id="Phone" required>
                     </div>
                     <div class="inputDetail">
-                        <b>Email</b>
+                        <!-- <b>Email</b> -->
                         <input type="email" placeholder="Enter Email" id="email" required>
                     </div>
                 </div>
@@ -114,7 +117,7 @@
         <div class="TotalPrice">
             <div class="amount">Cart Summary</div>
            <div class="amount">Sub-Total:<span>₦<div id="cartTotal"> 0</div></span></div>
-           <div class="amount">Delivery Fee:<span>₦<div id="cartTotal"> 0</div></span></div>
+           <div class="amount">Delivery Fee:<span>₦<div id="Sub-Total">200.00</div></span></div>
             <!-- <button type="submit" onclick="placeOrder()">Place Order</button> -->
         </div>
       
@@ -182,6 +185,8 @@
             document.addEventListener("DOMContentLoaded", cartCount)
 
 
+           let getTotal = JSON.parse(localStorage.getItem("productHolder")) 
+            
          const burgerToggle = () =>{
          const hamBurger = document.getElementById("Nav")
          hamBurger.classList.toggle("open")
@@ -194,10 +199,10 @@
         }
         document.getElementById("cancel").addEventListener("click", closeToggle)
 
-
+       
         
         const userDetail = (event) =>{
-         event.preventDefault()
+        //  event.preventDefault()
     
                 const FirstName = document.getElementById("firstName").value
                 const LastName = document.getElementById("lastName").value
@@ -211,12 +216,8 @@
                   
                alert("Order Placed Successful")
         }
-        let totalAmount = 0
-        totalAmount += item.price * item.quantity
 
-        cartTotal.innerText = totalAmount.toFixed(2)
-
-        function getCart() {
+            function getCart() {
             let display = JSON.parse(localStorage.getItem("productHolder")) || []
                     return display
                 }
@@ -230,6 +231,21 @@
                     console.log(totalQuantity, "quantity")
                 }
                 document.addEventListener("DOMContentLoaded", cartCount)
+                let totalAmount = 0
+ 
+                function getAmount() {
+                    let display = JSON.parse(localStorage.getItem("productHolder"))
+                    console.log("text", display)
+                    const cartTotal = document.getElementById("cartTotal")
+                   display.forEach((item)=>{
+                    totalAmount += item.price * item.quantity
+                    cartTotal.innerText = totalAmount.toFixed(2)
+                   })
+                    console.log(totalAmount,'amount')
+                }
+                getAmount()
+                console.log(totalAmount,'amount')
+                
     </script>
 </html>
 

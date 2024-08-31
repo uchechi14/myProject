@@ -51,7 +51,6 @@ body{
 .LeftNav ol li{
     font-size: 16px;
     font-weight: 600;
-    
     /* gap: 25px; */
 }
 .LogoNav{
@@ -185,333 +184,90 @@ body{
         display: flex;
     }
 }
-
-.detailContainer{
+.SecondSection{
+    width: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    margin-top: 75px;
+    
+}
+.SecondWrapper{
     width: 85%;
-    /* height: 100vh; */
-    /* background-color: rebeccapurple; */
-    display: flex;
-    justify-content: center;
-    margin-top: 110px;
-    background-color: white;
-    padding: 15px 0;
-    border-radius: 3px;
+   margin-top: 50px;
+   display: flex;
+   background-color: white;
+ 
 }
-.detailWrapper{
-    width: 97%;
-    /* background-color: forestgreen; */
-    display: flex;
-    justify-content: center;
-}
-.leftSide{
-    width: 60%;
-    background-color: white;
-    display: flex;
-    flex-wrap: wrap;
-}
-.bigImage{
-    width: 70%;
-    /* height: 500px; */
-}
-.bigImage img{
+.firstPart{
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.smallImage{
-    width: 30%;
+    /* height: 60%; */
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    /* justify-content: space-between; */
-    align-items: flex-end;
+    justify-content: space-between;
+    /* background-color: chartreuse; */
 }
-.imag1{
-    width: 90%;
-    height: 160px;
+.LHS{
+    width: 45%;
+    margin-left: 25px;
+    padding-bottom: 35px;
 }
-.imag1 img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.rightSide{
-    width: 50%;
-    /* background-color: pink; */
-    display: flex;
-    justify-content: flex-end;
-}
-.detailSide{
-    width: 95%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    /* background-color: aliceblue; */
-}
-.nameP{
-    display: flex;
-    flex-direction: column;
-}
-.nameP h1{
-    margin-left: -5px;
-}
-.nameP b{
-    font-size: 25px;
-}
-.detail{
-    font-size: 17px;
-}
-.invite{
-    width: 100%;
-    height: 80px;
-    /* background-color: olive; */
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.increament{
-    width: 150px;
-    height: 60px;
-    background-color: black;
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    border-radius: 6px;
-}
-.increament p{
-    font-size: 30px;
-    color: white;
-    font-weight: bold;
-}
-.Sign{
-    width: 45px;
-    height: 45px;
-}
-.Sign img{
-    width: 100%;
-    height: 100%;
-    /* background-color: black; */
-    object-fit: cover;
-}
-.invite button{
-    width: 150px;
-    height: 60px;
-    background-color: #B0D0D3;
-    border-radius: 6px;
-    border: none;
-    font-size: 17px;
-    font-weight: bold;
-    cursor: pointer;
-}
-.invite button:hover{
-    background-color: rgb(34, 34, 34);
-    color: white;
-}
-.like{
-    width: 50px;
-    height: 50px;
-}
-.like img{
-    width: 100%;
-    height: 100%;
-    /* background-color: black; */
-    object-fit: cover;
-}
-.categories{
-    font-size: 17px;
+.LHS h1{
+    font-size: 40px;
     margin-top: 50px;
 }
-.socialMedia{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.LHS p{
+    font-size: 17px;
 }
-.socialMedia p{
-    font-size: 23px;
-    font-weight: bold;
+.RHS{
+    width: 45%;
+    /* height:70%; */
 }
-.iconsMedia{
-    display: flex;
-    gap: 10px;
-}
-.iM{
-    width: 25px;
-    height: 25px;
-}
-.iM img{
+.RHS img{
     width: 100%;
     height: 100%;
-    /* background-color: black; */
-    object-fit: cover;
+    border-radius: 6px;
 }
 @media (max-width:480px) {
-    .detailWrapper{
-        flex-direction: column;
-        width: 90%;
-    }
-        
-    .leftSide{
-        width: 100%;
+    .SecondWrapper{
         flex-direction: column;
     }
-    .smallImage{
+    .firstPart{
+        flex-direction: column-reverse;
+    }
+    .LHS{
         width: 100%;
-        height: 100px;
-        flex-direction: row;
-        gap: 5px;
-        margin-top: 20px;
-        /* background-color: red; */
-        justify-content: space-between;
+        margin-left: 0;
+    }.LHS p{
+        margin-top: 15px;
     }
-    .imag1 img{
-        width: 30%;
-        height: 100px;
-        margin-top: 60px;
-        object-fit: cover;
-    }
-    .bigImage{
-        width: 100%;
-        height: 300px;
-    }
-    .bigImage img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    } 
-    .smallImage img{
-        width: 100%;
-        height: 100px;
-        object-fit: cover;
-    }
-    .rightSide{
-        width: 100%;
-        margin-top: 10px;
-    }
-    .detailSide{
-        width: 100%;
-    }
-   .nameP h1{
-    width: 100%;
-    margin-left: 0px;
-    /* background-color: aqua; */
-    font-size: 35px;
-    }
-    .invite{
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    .categories{
+    .RHS{
         width: 100%;
     }
 }
-@media (min-width:481px) and (max-width:768px) {
-    .detailWrapper{
-        flex-direction: column;
-        width: 90%;
+@media (min-width:481px) and (max-width:768px){
+    .SecondWrapper{
+        flex-direction: column;    
+    }
+    .firstPart{
         align-items: center;
-        /* background-color: aqua; */
+        flex-direction: column-reverse;
     }
-        
-    .leftSide{
-        width: 100%;
-        /* background-color: red; */
-        flex-direction: column;
-        align-items: center;
+    .LHS{
+        width: 400px;
+        margin-left: 0;
+    }.LHS p{
+        margin-top: 15px;
     }
-    .smallImage{
-        width: 100%;
-        height: 100px;
-        flex-direction: row;
-        gap: 5px;
-        margin-top: 20px;
-        /* background-color: red; */
-        justify-content: space-between;
-    }
-    .imag1 img{
-        width: 30%;
-        height: 100px;
-        margin-top: 60px;
-        object-fit: cover;
-    }
-    .bigImage{
-        width: 95%;
-        height: 400px;
-    }
-    .bigImage img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    .smallImage{
-        gap: 0px;
-        justify-content: center;
-    } 
-    .smallImage img{
-        width: 89%;
-        height: 120px;
-        object-fit: cover;
-        margin-left: 12px;
-    }
-    .rightSide{
-        width: 100%;
-        margin-top: 10px;
-    }
-    .detailSide{
-        width: 100%;
-        margin-top: 30px;
-    }
-   .nameP h1{
-        width: 100%;
-        margin-left: 0px;
-        font-size: 35px;
-    }
-    .invite{
-        width: 370px;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-    .categories{
-        width: 100%;
-    }
-
-}
-@media (min-width:769px) and (max-width:1024px) {   
-    .leftSide{
-        width: 100%;
-        
-    }
-    .bigImage{
-        width: 100%;
-        /* background-color: rgb(165, 255, 63); */
-    }
-    .bigImage img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    .smallImage{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-        margin-top: 20px;
-        align-items: flex-start;
-        /* background-color: rgb(63, 249, 255); */
-        /* justify-content: space-between; */
-    }
-    .imag1{
-        width: 40%;
-        height: 100px;
-    }
-    .imag1 img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+    .RHS{
+        width: 400px;
     }
 }
-
-
+@media (min-width:769px) and (max-width:1024px){
+    .RHS{
+        width: 350px;
+    }
+    
+}
 
 .LastSection{
     width: 100%;

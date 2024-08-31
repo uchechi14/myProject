@@ -8,6 +8,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: calibri;
 }
 .Container{
     width:  100%;
@@ -18,7 +19,7 @@ body{
     align-items: center;
     justify-content: space-between;
     /* flex-direction: column; */
-    font-family: calibri;
+    
 }
 .LeftWrapper{
     width: 30%;

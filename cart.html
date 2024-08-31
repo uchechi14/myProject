@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
     <head>
         <title>Cart Page</title>
@@ -11,7 +11,11 @@
                     <img src="./Unicoz/LogoandIcons/hamburger.png">
                 </div>
                 <div class="LeftNav" id="Nav">
+                    <div class="cancel" id="cancel">
+                        <img src="./Unicoz/LogoandIcons/cancel-svgrepo-com.svg">
+                    </div>
                 <ol>
+                  
                     <li><a href="index.html">Home</a></li>
                     <li> <a href="product.html">Shop</a></li>
                     <li><a href="about.html">About Us</a></li>
@@ -25,7 +29,7 @@
                <div class="iconImg"><a href="register.html"><img src="./Unicoz/LogoandIcons/user.png" alt=""></a></div>
                <div class="iconImg">
                 <div class="countR">
-                 <a href="cart.html"> <img src="./Unicoz/LogoandIcons/shopping-cart.png" alt="">
+                <a href="cart.html"> <img src="./Unicoz/LogoandIcons/shopping-cart.png" alt="">
                     <div class="cartCount" id="cartCount"></div>
                 </a>
                 </div>
@@ -108,7 +112,7 @@
         // document.getElementById("cartCount").textContent = 5
 
             function getCart() {
-        let display = JSON.parse(localStorage.getItem("productHolder")) || []
+          let display = JSON.parse(localStorage.getItem("productHolder")) || []
                 return display
             }
             function saveCart(display) {
@@ -163,8 +167,13 @@
     const burgerToggle = () =>{
     const hamBurger = document.getElementById("Nav")
     hamBurger.classList.toggle("open")
-}
-   document.getElementById("HamBurger").addEventListener("click", burgerToggle)
+  }
+    document.getElementById("HamBurger").addEventListener("click", burgerToggle)
+    const closeToggle = () =>{
+    const Close = document.getElementById("Nav")
+    Close.classList.toggle("open")
+  }
+    document.getElementById("cancel").addEventListener("click", closeToggle)
 
     </script>
 

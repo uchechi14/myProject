@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Contact us</title>
-        <link rel="stylesheet" href="product.css">
+        <link rel="stylesheet" href="contact.css">
     </head>
     <body>
         <div class="FirstSection">
@@ -11,12 +11,16 @@
                     <img src="./Unicoz/LogoandIcons/hamburger.png">
                 </div>
                 <div class="LeftNav" id="Nav">
-                    <ol>
-                        <li><a href="index.html">Home</a></li>
-                        <li> <a href="#">Shop</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ol>
+                    <div class="cancel" id="cancel">
+                        <img src="./Unicoz/LogoandIcons/cancel-svgrepo-com.svg">
+                    </div>
+                <ol>
+                  
+                    <li><a href="index.html">Home</a></li>
+                    <li> <a href="product.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ol>
             </div>
             <div class="LogoNav">
                 <div class="Logo"><img src="./Unicoz/LogoandIcons/Nu_F 3.png"></div>
@@ -25,18 +29,80 @@
                <div class="iconImg"><a href="register.html"><img src="./Unicoz/LogoandIcons/user.png" alt=""></a></div>
                <div class="iconImg">
                 <div class="countR">
-                    <a href="cart.html"> <img src="./Unicoz/LogoandIcons/shopping-cart.png" alt="">
-                        <div class="cartCount" id="cartCount"></div>
-                    </a>
+                <a href="cart.html"> <img src="./Unicoz/LogoandIcons/shopping-cart.png" alt="">
+                    <div class="cartCount" id="cartCount"></div>
+                </a>
                 </div>
             </div>
             </div>
             </div>
-        </div> 
+        </div>
+            <div class="SecondSection">
+                <div class="SecondWrapper">
+                    <div class="leftSide">
+                        <div class="leftWrapper">
+                        <div class="upSide">
+                            <h1>Get In Touch</h1>
+                            <div class="info">
+                                <div class="icon"><img src="./Unicoz/LogoandIcons/location-pin-svgrepo-com.svg"></div>
+                                <p>50 Close A, Festac lagos</p>
+                            </div>
+                            <div class="info">
+                                <div class="icon"><img src="./Unicoz/LogoandIcons/phone-call-svgrepo-com.svg"></div>
+                                <p>+234 901 192 995 4</p>
+                            </div>
+                            <div class="info">
+                                <div class="icon"><img src="./Unicoz/LogoandIcons/clock-0900-svgrepo-com.svg"></div>
+                                <p>9 am - 9pm, 7 days a week</p>
+                            </div>
+                        </div>
+                        <div class="downSide">
+                            <a href="#"><div class="contact"> Get Support<img src="./Unicoz/LogoandIcons/headphone-svgrepo-com (1).svg"></div></a>
+                            <a href="#"><div class="contact"> Get Direction<img src="./Unicoz/LogoandIcons/location-pin-svgrepo-com.svg"></div></a>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="rightSide">
+                        <div class="rightWrapper">
+                        <div class="header">
+                            <h1>Make Custom Request</h1>
+                            <p>Must-have pieces selected every month want style Ideas and Treats?</p>
+                        </div>
+                        <form action="" class="inputInformation" onsubmit="userMessage()">
+                            <div class="personalDetail">
+                                <div class="inputDetail">
+                                    <!-- <b>Full Name</b> -->
+                                    <input type="text" placeholder="Full Name"  id="Name" required>
+                                </div>
+                                <div class="inputDetail">
+                                    <!-- <b>Email</b> -->
+                                    <input type="email" placeholder="Email" id="email" required>
+                                </div>
+                            </div>
+                            <div class="personalDetail">
+                                <div class="inputDetail">
+                                    <!-- <b>First Name</b> -->
+                                    <input type="text" placeholder="Phone number"  id="number" required>
+                                </div>
+                                <div class="inputDetail">
+                                    <!-- <b>Last Name</b> -->
+                                    <input type="text" placeholder="Subject" id="sub" required>
+                                </div>
+                            </div>
+                            <div class="personalDetail">
+                                <div class="Detail">
+                                    <!-- <b>First Name</b> -->
+                                    <input type="text" placeholder="Enter Message"  id="message" required>
+                                </div>
+                            </div>
+                            <button type="submit" class="submit">Submit</button>
+                        </form>
+                    </div>
+                    </div>
+                </div>
+            </div>
 
-
-
-        <!-- <div class="LastSection">
+        <div class="LastSection">
             <div class="LastWrapper">
                 <div class="First">
                     <div class="Logo"><img src="./Unicoz/LogoandIcons/Slice_2-removebg-preview.png"></div>
@@ -84,7 +150,7 @@
                 <p>Refund Policy</p>
             </div>
         </div>
-        </div> -->
+        </div>
 
       
     </body>
@@ -110,5 +176,21 @@
             console.log(totalQuantity, "quantity")
         }
         document.addEventListener("DOMContentLoaded", cartCount)
+
+
+        const userMessage = () =>{
+        //  event.preventDefault()
+    
+                const FullName = document.getElementById("Name").value
+                const Email = document.getElementById("email").value
+                const phoneNumber = document.getElementById("number").value
+                const Subject = document.getElementById("sub").value
+                const UserFeeback = document.getElementById("message").value
+
+                const userData = {FullName, Email, phoneNumber, Subject, UserFeeback}
+                localStorage.setItem("userData", JSON.stringify(userData))
+                  
+               alert("Message Sent Successful")
+        }
     </script>
 </html>    

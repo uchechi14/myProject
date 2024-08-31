@@ -51,7 +51,7 @@ body{
 .LeftNav ol li{
     font-size: 16px;
     font-weight: 600;
-    font-family: calibri;
+    
     /* gap: 25px; */
 }
 .LogoNav{
@@ -125,6 +125,7 @@ body{
     .LeftNav{
         width: auto;
         display: none;
+        flex-direction: column;
         height: 100vh;
         background-color: white;
         color: black;
@@ -136,14 +137,21 @@ body{
         width: 300px;
         display: flex;
         flex-direction: column;
+        align-items: self-start;
         padding-top: 30px;
-        margin-top: 50px;
-        /* margin-right: 20px; */
+        /* margin-top: 60px;
+        margin-right: 20px; */
+        /* background-color: wheat; */
+        
     }
-    .LeftNav ol li{
-        /* text-align: left; */
+    .LeftNav ol li a{
         width: 100%;
-        /* padding-left: 0px; */
+        margin-left: 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.418);
+    }
+    .LeftNav ol li {
+        width: 100%;
         padding-bottom: 10px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.418);
     }
@@ -162,7 +170,8 @@ body{
     .cancel{
     display: flex;
     margin-top: 20px;
-    margin-left: 0;
+    margin-left: 20px;
+    cursor: pointer;
     /* background-color: lawngreen; */
     
     }
@@ -177,46 +186,42 @@ body{
     }
 }
     
-
-
-
     .HeroPage{
         width: 100%;
-        height: 100vh;
-        background-color: #B0D0D3;
         display: flex;
-        align-items: center;
         justify-content: center;
-        /* margin-top: 60px; */
+        background-color: #B0D0D3;
+        margin-top: 90px;
+
     }
     .HeroWrapper{
         width: 85%;
+        margin-top: 90px;
+        height: 100%;
+        /* background-color: white; */
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 180px;
+        /* flex-wrap: wrap; */
+        flex-direction: row;
     }
     .LeftHero{
-        margin-top: 150px;
-        background-color: yellow;
-
+        width: 600px;
     }
-    .LeftHero p{
+    .winter{
         font-size: 25px;
-        font-family: calibri;
         margin-top: 20px;
     }
-    .LeftHero h1{
-        width: 450px;
-        font-family: calibri;
-        font-size: 60px;
-        /* margin-top: 10px; */
+    .LeftHero h1{  
+        font-size: 65px;
+        line-height: 1;
     }
     .ButtonHolder{
+       
         margin-top: 30px;
-        display: flex;
-        gap: 20px;
-        /* margin-top: 50px; */
+    }
+    .ButtonHolder a{
+        text-decoration: none;
     }
     .Women{
         padding: 16px 50px;
@@ -227,78 +232,76 @@ body{
         background-color: black;
         color: white;
         font-size: 20px;
-        font-family: calibri;
         font-weight: 600;
+        cursor: pointer;
     }
-    .Men{
-        padding: 16px 50px;
-        border-radius: 5px;
-        border: none;
+    .Women:hover{
         background-color: white;
         color: black;
         font-weight: 600;
-        font-size: 20px;
-        /* margin-left: 20px; */
-      transition: all 0.3s ease-in-out;
     }
-    .RightHero{
-        flex: 1;
-        width: 100%;
-        /* height: 100vh; */
-        /* margin-top: 80px; */
-        /* background-color: yellow; */
-        margin-top: 45px;
-
-       
+    .style{
+        font-size: 19px;
     }
     .imgHolder{
-      width: 90%;
-      height: 10%;
-      /* margin-left: 100px; */
+        width: 450px;
+        height: 460px;
+        /* background-color: aquamarine; */
     }
     .imgHolder img{
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        /* height: 94vh; */
+        /* margin-left: -60px; */
+        /* object-fit: cover; */
+        object-fit: contain;
     }
     @media (max-width: 480px) {
+        .HeroPage{
+            height: 100vh;
+            margin-top: 5px;
+           
+        }
         .HeroWrapper{
-            flex-direction: column;
+            /* flex-direction: column; */
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 0;
+            flex-direction: column-reverse;
         }
         .LeftHero{
+            width: 100%;
             display: flex;
             align-items: center;
-            justify-content: center;
+            /* justify-content: center; */
             flex-direction: column;
+            margin-top: -150px;
+            /* background-color: white; */
         }
-        .LeftHero p{
-            font-size: 15px;
+        .winter{
+            font-size: 17px;
+            /* margin-top: 70px;    */
         }
         .LeftHero h1{
             font-size: 30px;
-            width: 300px;
+             width: 330px;
             text-align: center;
-        }.ButtonHolder{
+        }
+        .style{
+            width: 250px;
+            text-align: center;
+            /* margin-top: 10px; */
+            display: none;
+        }
+        .ButtonHolder{
             margin-top: 10px;
+            /* margin-bottom: 80px; */
         }
-        .Women{
-            /* padding: 2px 20px; */
-            font-size: 15px;
-            width: 100px;
-            height: 45px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .Men{
-            /* padding: 2px 20px; */
-            font-size: 15px;
-            width: 100px;
-            height: 45px;
+        .Women{ 
+            font-size: 17px;
+            width: 200px;
+            height: 55px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -307,65 +310,66 @@ body{
             width: 100%;
             display: flex;
             justify-content: center;
-            /* background-color: red; */
+            margin-top: -170px;
+            /* background: darkblue */
         }
         .imgHolder{
-            width: 250px;
-            height: 40vh;
-           
+            width: 100%;
+            height: 200px;
+            display: flex;
+            margin-bottom: 80px;
+            justify-content: center;
         }
         .imgHolder img{
-            width: 100%;
-            height: 50vh;
-            margin-top: -72px;
+            width: 80%;
+            height: 50%;
+            object-fit: contain;
         }
     }
     @media (min-width: 481px) and (max-width:768px) {
         .HeroPage{
             /* height: 100vh; */
             margin-top: 5px;
-            /* background-color: rgb(156, 0, 0); */
+           
         }
         .HeroWrapper{
-            flex-direction: column;
+            /* flex-direction: column; */
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 0;
+            flex-direction: column ;
         }
         .LeftHero{
             display: flex;
             align-items: center;
             /* justify-content: center; */
             flex-direction: column;
+            width: 100%;
         }
-        .LeftHero p{
-            /* margin-top: 50px; */
-            font-size: 25px;
+        .winter{
+            font-size: 20px;
+            /* margin-top: 70px;    */
         }
         .LeftHero h1{
-            font-size: 30px;
-             width: 250px;
+            font-size: 35px;
+             /* width: 330px; */
             text-align: center;
+        }
+        .style{
+            width: 250px;
+            text-align: center;
+            /* margin-top: 10px; */
+            display: none;
         }
         .ButtonHolder{
             margin-top: 10px;
-            margin-bottom: 80px;
+            /* margin-bottom: 80px; */
         }
-        .Women{
-            /* padding: 2px 20px; */
-            font-size: 15px;
-            width: 100px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .Men{
-            /* padding: 2px 20px; */
-            font-size: 15px;
-            width: 100px;
-            height: 50px;
+        .Women{ 
+            font-size: 17px;
+            width: 200px;
+            height: 55px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -377,46 +381,65 @@ body{
             /* background-color: red; */
         }
         .imgHolder{
-            width: 300px;
-            height: 40vh;
-           
+            width: 100%;
+            height: 400px;
+            display: flex;
+            /* background-color: red; */
+            justify-content: center;
         }
         .imgHolder img{
-            width: 100%;
-            height: 60vh;
-            margin-top: -185px;
+            width: auto;
+            margin-bottom: 20px;
+            object-fit: cover;
         }
     }
     @media (min-width: 769px) and (max-width: 1024px) {
         .HeroPage{
-            margin-top: 70px
+            /* margin-top: 70px */
         }
-        .LeftHero p{
+        .LeftHero{
+            width: 50%;
+        }
+        .winter{
             margin-top: 50px;
             font-size: 20px;
         }
         .LeftHero h1{
-            font-size: 45px;
-             width: 350px;
+            font-size: 47px;
+             /* width: 350px; */
             /*text-align: center; */
         }
-        .Women{
-            /* padding: 2px 20px; */
+        .ButtonHolder{
+            margin-top: 10px;
+            /* margin-bottom: 80px; */
+        }
+        .Women{ 
             font-size: 17px;
-            width: 150px;
-            height: 45px;
+            width: 200px;
+            height: 55px;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-        .Men{
-            /* padding: 2px 20px; */
-            font-size: 17px;
-            width: 150px;
-            height: 45px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .imgHolder{
+            width: 450px;
+            height: 460px;
+        }
+        .imgHolder img{
+            /* width: auto; */
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    @media (max-width:1080px){
+        .imgHolder{
+            width: 450px;
+            height: 460px;
+        }
+        .imgHolder img{
+            /* width: auto; */
+            height: 100%;
+            object-fit: contain;
         }
     }
     .SecondSection{
@@ -666,7 +689,7 @@ body{
         font-weight: 500;
     }
     .CardHolder b{
-        font-size: 16px;
+        font-size: 23px;
         margin-top: 5px;
     }
     @media (max-width: 480px) {
@@ -1136,21 +1159,24 @@ body{
     .Cards{
         width: 100%;
         display: flex;
-        justify-content: center;
-        gap: 20px;
+        /* justify-content: center; */
+        justify-content: space-between;
         flex-wrap: wrap;
         cursor: pointer;
         margin-top: 10px;
+        /* gap: 35px; */
+        /* background-color: #f4f4f4; */
     }
     .CardWrap{
-        width: 250px;
-        height: 300px;
+        width: 220px;
+        height: 330px;
         display: flex;
-        margin-top: 25px;
+        margin-top: 30px;
         align-items: center;
-        justify-content: center;
+        /* justify-content: space-between; */
         flex-direction: column;
         margin-bottom: 20px;
+       
     }
     .CardWrap:hover{
         background-color: #f4f4f4;
@@ -1158,9 +1184,9 @@ body{
         transition: all 0.3s ease-in-out;
     }
     .CardWrap img{
-        width: 150px;
-        height: 200px;
-        margin-top: 5px;
+        width: 190px;
+        height: 220px;
+        margin-top: 10px;
     }
     .CardWrap p{
         width: 150px;
@@ -1170,10 +1196,13 @@ body{
         font-weight: 500;
     }
     .CardWrap b{
-        font-size: 16px;
+        font-size: 23px;
         margin-top: 5px;
     }
     @media (max-width: 480px) {
+        .Cards{
+            justify-content: center;
+        }
         .Text h3{
             font-size: 25px;
         }
@@ -1186,9 +1215,13 @@ body{
         .CardWrap:nth-child(4){
             display: none;
         }
+        .CardWrap:nth-child(5){
+            display: none;
+        }
     }
     @media (min-width:481px) and (max-width:768px){
         .Cards{
+            justify-content: center;
             flex-direction: row;
         }
         .CardWrap{
@@ -1199,6 +1232,15 @@ body{
             width: 150px;
             height: 170px;
          }
+         /* .CardWrap:nth-child(5){
+            display: none;
+        } */
+    }
+    @media (min-width:769px) and (max-width:1024px){
+        .Cards{
+            justify-content: center;
+            flex-direction: row;
+        }
     }
     .LastSection{
         width: 100%;
