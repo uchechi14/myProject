@@ -118,13 +118,12 @@ body{
     height: 100%;
     object-fit: cover;
 }
-@media (max-width:900px) {
+@media (max-width:800px) {
     .Header{
         margin: auto;
-        /* gap: 0px; */
     }
     .LeftNav{
-        width: auto;
+        width: 70%;
         display: none;
         flex-direction: column;
         height: 100vh;
@@ -135,21 +134,17 @@ body{
         left: 0;
     }
     .LeftNav ol {
-        width: 300px;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: self-start;
         padding-top: 30px;
-        /* margin-top: 60px;
-        margin-right: 20px; */
-        /* background-color: wheat; */
         
     }
     .LeftNav ol li a{
         width: 100%;
         margin-left: 20px;
         padding-bottom: 10px;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.418);
     }
     .LeftNav ol li {
         width: 100%;
@@ -631,6 +626,10 @@ body{
     cursor: pointer;
 }
 @media (max-width:480px) {
+    .LastWrapper{
+        justify-content: center;
+        margin-top: 10px;
+    }
     .FooterWrap{
         align-items: center;
         flex-direction: column;
@@ -650,6 +649,30 @@ body{
     }
 }
 @media (min-width:481px) and (max-width:768px) {
+    .LastWrapper{
+    justify-content: center;
+    margin-top: 10px;
+    display: flex;
+    /* gap: 20px; */
+}
+.First:nth-child(1){
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.First:nth-child(1) p{
+    width: 200px;
+}
+.First:nth-child(2){
+    width: 150px;
+    /* display: flex; */
+}
+.First:nth-child(3){
+    width: 150px;
+    margin-left: 20px;
+    /* display: flex; */
+}
     .FooterWrap{
         align-items: center;
         flex-direction: column;

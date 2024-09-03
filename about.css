@@ -116,13 +116,12 @@ body{
     height: 100%;
     object-fit: cover;
 }
-@media (max-width:900px) {
+@media (max-width:800px) {
     .Header{
         margin: auto;
-        /* gap: 0px; */
     }
     .LeftNav{
-        width: auto;
+        width: 70%;
         display: none;
         flex-direction: column;
         height: 100vh;
@@ -133,21 +132,17 @@ body{
         left: 0;
     }
     .LeftNav ol {
-        width: 300px;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: self-start;
         padding-top: 30px;
-        /* margin-top: 60px;
-        margin-right: 20px; */
-        /* background-color: wheat; */
         
     }
     .LeftNav ol li a{
         width: 100%;
         margin-left: 20px;
         padding-bottom: 10px;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.418);
     }
     .LeftNav ol li {
         width: 100%;
@@ -186,25 +181,23 @@ body{
 }
 .SecondSection{
     width: 100%;
-    /* background-color: aqua; */
     display: flex;
     justify-content: center;
-    margin-top: 75px;
+     margin-top: 75px;
     
 }
 .SecondWrapper{
     width: 85%;
    margin-top: 50px;
+   border-radius: 6px;
    display: flex;
    background-color: white;
  
 }
 .firstPart{
     width: 100%;
-    /* height: 60%; */
     display: flex;
     justify-content: space-between;
-    /* background-color: chartreuse; */
 }
 .LHS{
     width: 45%;
@@ -220,7 +213,6 @@ body{
 }
 .RHS{
     width: 45%;
-    /* height:70%; */
 }
 .RHS img{
     width: 100%;
@@ -230,6 +222,7 @@ body{
 @media (max-width:480px) {
     .SecondWrapper{
         flex-direction: column;
+        border-radius: 6px;
     }
     .firstPart{
         flex-direction: column-reverse;
@@ -246,20 +239,34 @@ body{
 }
 @media (min-width:481px) and (max-width:768px){
     .SecondWrapper{
-        flex-direction: column;    
+        border-radius: 6px;
+        
     }
     .firstPart{
         align-items: center;
         flex-direction: column-reverse;
+        justify-content: space-between;
     }
     .LHS{
-        width: 400px;
-        margin-left: 0;
-    }.LHS p{
-        margin-top: 15px;
+        width: 100%;
+        height: 60%;
+        margin: 0;
+        padding-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        gap: 20px;
+    }
+    .LHS h1{
+        text-align: center;
+        margin-top: 0;
+    }
+    .LHS p{
+        margin-top: 0;
     }
     .RHS{
-        width: 400px;
+        width: 100%;
+        height: 40%;
     }
 }
 @media (min-width:769px) and (max-width:1024px){
@@ -405,6 +412,10 @@ body{
     cursor: pointer;
 }
 @media (max-width:480px) {
+    .LastWrapper{
+        justify-content: center;
+        margin-top: 10px;
+    }
     .FooterWrap{
         align-items: center;
         flex-direction: column;
@@ -424,6 +435,30 @@ body{
     }
 }
 @media (min-width:481px) and (max-width:768px) {
+    .LastWrapper{
+    justify-content: center;
+    margin-top: 10px;
+    display: flex;
+    /* gap: 20px; */
+}
+.First:nth-child(1){
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.First:nth-child(1) p{
+    width: 200px;
+}
+.First:nth-child(2){
+    width: 150px;
+    /* display: flex; */
+}
+.First:nth-child(3){
+    width: 150px;
+    margin-left: 20px;
+    /* display: flex; */
+}
     .FooterWrap{
         align-items: center;
         flex-direction: column;

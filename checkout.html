@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Checkout Page</title>
         <link rel="stylesheet" href="checkout.css ">
     </head>
@@ -118,6 +120,7 @@
             <div class="amount">Cart Summary</div>
            <div class="amount">Sub-Total:<span>₦<div id="cartTotal"> 0</div></span></div>
            <div class="amount">Delivery Fee:<span>₦<div id="Sub-Total">200.00</div></span></div>
+           <div class="amount">Total:<span>₦<div id="Total">0.00</div></span></div>
             <!-- <button type="submit" onclick="placeOrder()">Place Order</button> -->
         </div>
       
@@ -202,7 +205,7 @@
        
         
         const userDetail = (event) =>{
-        //  event.preventDefault()
+         event.preventDefault()
     
                 const FirstName = document.getElementById("firstName").value
                 const LastName = document.getElementById("lastName").value
@@ -232,20 +235,23 @@
                 }
                 document.addEventListener("DOMContentLoaded", cartCount)
                 let totalAmount = 0
- 
+                let Total = document.getElementById("Total")
                 function getAmount() {
                     let display = JSON.parse(localStorage.getItem("productHolder"))
                     console.log("text", display)
                     const cartTotal = document.getElementById("cartTotal")
                    display.forEach((item)=>{
                     totalAmount += item.price * item.quantity
-                    cartTotal.innerText = totalAmount.toFixed(2)
+                    cartTotal.textContent = totalAmount.toFixed(2)
+                    newTotal = totalAmount + 200
+                    Total.innerText = newTotal.toFixed(2)
+                    
                    })
                     console.log(totalAmount,'amount')
                 }
                 getAmount()
                 console.log(totalAmount,'amount')
-                
+
     </script>
 </html>
 

@@ -7,10 +7,21 @@ const UserRegister = (event) =>{
 
 
     if (password === confirmPassword) {
-        alert("Account Created Succcessfully")
-         window.location.href = "Login.html"
+        // alert("Account Created Succcessfully")
+        //  window.location.href = "Login.html"
+        swal.fire({
+                title: "Registration Successful",
+                icon: "success",
+                confirmButtonText: "OK"
+                }).then(() => {
+                 window.location.href = "login.html"
+               })
     } else {
-        alert("Confirm Password")
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "confirm email or password!",
+          });
     }
 
     const userData = {email, password, confirmPassword}
@@ -32,10 +43,19 @@ const UserLogin = (event) =>{
     const loginUser = JSON.parse(localStorage.getItem("usersData"))
 
     if (loginUser && loginUser.email === loginEmail && loginUser.password === loginPassword) {
-         alert("Login Successful")
-        window.location.href = "index.html"
+        swal.fire({
+            title: "Registration Successful",
+            icon: "success",
+            confirmButtonText: "OK"
+            }).then(() => {
+             window.location.href = "index.html"
+           })
     }else{
-        alert("Invalid email or password")
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "incorrect email or password!",
+          });
     }
 
 }

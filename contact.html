@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Contact us</title>
         <link rel="stylesheet" href="contact.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     </head>
     <body>
         <div class="FirstSection">
@@ -68,7 +72,7 @@
                             <h1>Make Custom Request</h1>
                             <p>Must-have pieces selected every month want style Ideas and Treats?</p>
                         </div>
-                        <form action="" class="inputInformation" onsubmit="userMessage()">
+                        <form action="" class="inputInformation" onsubmit="userMessage(event)">
                             <div class="personalDetail">
                                 <div class="inputDetail">
                                     <!-- <b>Full Name</b> -->
@@ -178,19 +182,22 @@
         document.addEventListener("DOMContentLoaded", cartCount)
 
 
-        const userMessage = () =>{
-        //  event.preventDefault()
+        const userMessage = (event) =>{
+            event.preventDefault()
     
                 const FullName = document.getElementById("Name").value
                 const Email = document.getElementById("email").value
                 const phoneNumber = document.getElementById("number").value
                 const Subject = document.getElementById("sub").value
                 const UserFeeback = document.getElementById("message").value
-
                 const userData = {FullName, Email, phoneNumber, Subject, UserFeeback}
                 localStorage.setItem("userData", JSON.stringify(userData))
                   
-               alert("Message Sent Successful")
+                Swal.fire("Message sent successful!").then(() => {
+                window.location.href = "contact.html"
+               })
+                
+
         }
     </script>
 </html>    

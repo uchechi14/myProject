@@ -117,13 +117,12 @@ body{
     height: 100%;
     object-fit: cover;
 }
-@media(max-width:500px) {
+@media (max-width:800px) {
     .Header{
         margin: auto;
-        /* gap: 0px; */
     }
     .LeftNav{
-        width: auto;
+        width: 70%;
         display: none;
         flex-direction: column;
         height: 100vh;
@@ -134,21 +133,17 @@ body{
         left: 0;
     }
     .LeftNav ol {
-        width: 300px;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: self-start;
         padding-top: 30px;
-        /* margin-top: 60px;
-        margin-right: 20px; */
-        /* background-color: wheat; */
         
     }
     .LeftNav ol li a{
         width: 100%;
         margin-left: 20px;
         padding-bottom: 10px;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.418);
     }
     .LeftNav ol li {
         width: 100%;
@@ -157,7 +152,7 @@ body{
     }
     .LogoNav{
         /* width: auto; */
-        margin-left: 50px;
+        margin-right: 0;
     }
     .RightNav{
         width: auto;
@@ -172,7 +167,6 @@ body{
     margin-top: 20px;
     margin-left: 20px;
     cursor: pointer;
-    /* background-color: lawngreen; */
     
     }
     .cancel.open{
@@ -256,47 +250,40 @@ body{
         /* object-fit: cover; */
         object-fit: contain;
     }
-    @media(max-width: 500px) {
+    @media (max-width: 480px) {
         .HeroPage{
-            height: 100vh;
-            margin-top: 5px;
-           
+            width: 100%;
+            /* height: 40%; */
         }
         .HeroWrapper{
-            /* flex-direction: column; */
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 0;
-            flex-direction: column-reverse;
+            flex-direction: column;
+            margin-top: 7%;
         }
         .LeftHero{
             width: 100%;
             display: flex;
             align-items: center;
-            /* justify-content: center; */
             flex-direction: column;
-            margin-top: -150px;
-            /* background-color: white; */
         }
         .winter{
-            font-size: 17px;
-            /* margin-top: 70px;    */
+            font-size: 18px;
         }
         .LeftHero h1{
-            font-size: 30px;
+            font-size: 35px;
              width: 330px;
             text-align: center;
         }
         .style{
             width: 250px;
             text-align: center;
-            /* margin-top: 10px; */
-            display: none;
         }
         .ButtonHolder{
-            margin-top: 10px;
-            /* margin-bottom: 80px; */
+            margin-top: 15px;
+            padding-bottom: 20px;
         }
         .Women{ 
             font-size: 17px;
@@ -310,25 +297,22 @@ body{
             width: 100%;
             display: flex;
             justify-content: center;
-            margin-top: -170px;
-            /* background: darkblue */
+            align-items: flex-end;
         }
         .imgHolder{
             width: 100%;
-            height: 200px;
-            display: flex;
-            margin-bottom: 80px;
-            justify-content: center;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(./Unicoz/images/heroImage.png);
         }
         .imgHolder img{
-            width: 80%;
-            height: 50%;
-            object-fit: contain;
+            display: none;
         }
     }
-    @media(max-width:768px) {
+    @media (min-width: 481px) and (max-width:768px) {
         .HeroPage{
-            /* height: 100vh; */
             margin-top: 5px;
            
         }
@@ -364,7 +348,7 @@ body{
         }
         .ButtonHolder{
             margin-top: 10px;
-            /* margin-bottom: 80px; */
+            padding-bottom: 10px;
         }
         .Women{ 
             font-size: 17px;
@@ -393,7 +377,8 @@ body{
             object-fit: cover;
         }
     }
-    @media(max-width: 1024px) {
+    @media (min-width: 769px) and (max-width: 1024px) {
+
         .LeftHero{
             width: 50%;
         }
@@ -428,7 +413,7 @@ body{
             object-fit: contain;
         }
     }
-    @media(max-width:1080px){
+    @media (max-width:1080px){
         .imgHolder{
             width: 450px;
             height: 460px;
@@ -520,7 +505,7 @@ body{
         margin-top: 15px;
         font-weight: bold;
     }
-    @media(max-width:500px) {
+    @media (max-width:480px) {
         .SecondWrapper{
             width: 85%;
             /* background-color: violet; */
@@ -562,7 +547,7 @@ body{
             display: none;
         }
     }
-    @media(max-width: 768px) {
+    @media (min-width: 481px) and (max-width: 768px) {
         .SecondWrapper{
             width: 85%;
             /* background-color: violet; */
@@ -604,7 +589,7 @@ body{
             display: none;
         }
     }
-    @media(max-width: 1024px) {
+    @media (min-width: 769px) and (max-width: 1024px) {
         .Categories{
             display: flex;
             align-items: center;
@@ -689,7 +674,7 @@ body{
         font-size: 23px;
         margin-top: 5px;
     }
-    @media(max-width: 500px) {
+    @media (max-width: 480px) {
         .ThirdProduct{
             display: flex;
             align-items: center;
@@ -716,7 +701,7 @@ body{
             display: none;
         }
     }
-    @media(max-width: 768px) {
+    @media (min-width: 481px) and (max-width: 768px) {
         .ThirdWrapper{
             width: 85%;
             /* background-color: wheat; */
@@ -748,7 +733,7 @@ body{
         }
        
     }
-    @media(max-width: 1024px){
+    @media (min-width: 769px) and (max-width: 1024px){
         .ThirdProduct{
             width: 100%;
             display: flex;
@@ -793,7 +778,7 @@ body{
     .ForthWrapper b img{
         object-fit: cover;
     }
-    @media(max-width: 500px) {
+    @media (max-width: 480px) {
         .ForthWrapper{
             flex-direction: column;
             height: 130px;
@@ -816,7 +801,7 @@ body{
             /* background-color: violet; */
         }
     }
-    @media(max-width: 768px) {
+    @media (min-width:481px) and (max-width: 768px) {
         .ForthWrapper h1{
             width: 270px;
             font-size: 23px;
@@ -828,7 +813,7 @@ body{
             gap: 5px;
         }
     }
-    @media(max-width: 1024px){
+    @media (min-width:769px) and (max-width: 1024px){
         .ForthWrapper h1{
             width: 500px;
         }
@@ -960,7 +945,7 @@ body{
         font-size: 17px;
         /* width: 90px; */
     }
-    @media(max-width: 500px) {
+    @media (max-width: 480px) {
         .FifthWrapper{
             flex-direction: column;
         }
@@ -1022,7 +1007,7 @@ body{
         }
         
     }
-    @media(max-width:768px) {
+    @media (min-width:481px) and (max-width:768px) {
         .FifthWrapper{
             flex-direction: column;
         }
@@ -1086,7 +1071,7 @@ body{
             text-align: center;
         }
     }
-    @media(max-width:1024px){
+    @media (min-width:769px) and (max-width:1024px){
         .FifthWrapper{
             flex-direction: column;
         }
@@ -1196,7 +1181,7 @@ body{
         font-size: 23px;
         margin-top: 5px;
     }
-    @media(max-width: 500px) {
+    @media (max-width: 480px) {
         .Cards{
             justify-content: center;
         }
@@ -1233,7 +1218,7 @@ body{
             display: none;
         } */
     }
-    @media(max-width:1024px){
+    @media (min-width:769px) and (max-width:1024px){
         .Cards{
             justify-content: center;
             flex-direction: row;
@@ -1374,7 +1359,7 @@ body{
         transition: all 0.3s ease-in-out;
         cursor: pointer;
     }
-    @media(max-width:500px) {
+    @media (max-width:480px) {
         .LastWrapper{
             justify-content: center;
             margin-top: 10px;
@@ -1397,7 +1382,7 @@ body{
             padding-bottom: 10px;
         }
     }
-    @media(max-width:768px) {
+    @media (min-width:481px) and (max-width:768px) {
         .LastWrapper{
         justify-content: center;
         margin-top: 10px;

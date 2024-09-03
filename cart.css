@@ -117,13 +117,12 @@ body{
     height: 100%;
     object-fit: cover;
 }
-@media (max-width:900px) {
+@media (max-width:800px) {
     .Header{
         margin: auto;
-        /* gap: 0px; */
     }
     .LeftNav{
-        width: auto;
+        width: 70%;
         display: none;
         flex-direction: column;
         height: 100vh;
@@ -134,21 +133,17 @@ body{
         left: 0;
     }
     .LeftNav ol {
-        width: 300px;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: self-start;
         padding-top: 30px;
-        /* margin-top: 60px;
-        margin-right: 20px; */
-        /* background-color: wheat; */
         
     }
     .LeftNav ol li a{
         width: 100%;
         margin-left: 20px;
         padding-bottom: 10px;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.418);
     }
     .LeftNav ol li {
         width: 100%;
@@ -408,14 +403,12 @@ body{
     }
 }
 
-
 .CartOptions{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 75px;
-    /* background-color: gold; */
 }
 .CartWrapper{
     width: 85%;
@@ -425,9 +418,6 @@ body{
 }
 .Cart{
     width: 70%;
-    /* border: 1px solid rgb(160, 156, 156); */
-    /* display: flex; */
-    /* justify-content: center; */
     margin-top: 50px;
     padding: 20px 0px;
     /* background-color: white; */
@@ -448,17 +438,13 @@ body{
     flex-direction: column;
     align-items: center;
     border: none;
-    /* background-color: fuchsia; */
-    /* gap: 10px; */
 }
 .innerCartItem{
     width: 100%;                                                                                                                                                                                 
     display: flex;
-    /* gap: -90px; */
     justify-content: space-between;
     margin-top: 10px;
    padding-bottom: 10px;
-   /* background-color: violet; */
 }
 .detailtextHolder{
     width: 80%;
@@ -466,12 +452,10 @@ body{
     justify-content: space-around;
     margin-left: 20px;
     padding-right: 20px;
-    /* background-color: blue; */
 }
 .detailtextHolder b{
     width: 200px;
     font-size: 20px;
-    /* margin-right: 500px; */
 }
 .detailtextHolder b{
     font-size: 23px;
@@ -495,7 +479,6 @@ body{
     object-fit: cover;
 }
 .detailtextHolder{
-    /* background-color: rgb(221, 48, 48); */
     display: flex;
 }
 .delete{
@@ -523,13 +506,11 @@ body{
     padding: 0 10px;
     gap: 20px;
     border: 1px solid rgb(160, 156, 156);
-    /* padding-bottom: -50px; */
 }
 .summary{
     width: 96%;
     margin-top: 10px;
     padding-bottom: 5px;
-    /* margin-left: -140px; */
     border-bottom: 1px solid rgb(160, 156, 156); 
 }
 .amount{
@@ -549,6 +530,7 @@ body{
     font-size: 25px;
     display: flex;
     font-weight: bold;
+    align-items: center;
 }
 .TotalPrice div{
     font-size: 23px;
