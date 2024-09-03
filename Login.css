@@ -154,7 +154,7 @@ body{
     border-radius: 3px;
     cursor: pointer;
 }
-.Account a{
+.RightWrapper a{
     text-decoration: none;
     color: black;
     font-weight: bold;
@@ -224,11 +224,19 @@ body{
     }
     .Account{
         width: 100%;
-        padding: 17px 0;
+        display: flex;
+        justify-content: center;
+        padding: 17px 0px;
+    }
+    .RightWrapper a{
+        width: 85%;
+        display: flex;
+        justify-content: center;
     }
     .Account1{
         width: 100%;
         padding: 17px 0;
+        margin-top: 15px;
     }
 }
 @media (min-width:480px) and (max-width:768px) {
@@ -264,14 +272,8 @@ body{
         /* align-items: flex-start; */
 
     }
-    .Email{
-        /* width: 64%; */
-    }
     .Email input{
         width: 330px;
-    }
-    .Password{
-        /* width: 64%; */
     }
     .Password input{
         width: 330px;
