@@ -217,7 +217,10 @@
                 const userData = {FirstName, LastName, address, phoneNumber, Email, State}
                 localStorage.setItem("userData", JSON.stringify(userData))
                   
-               alert("Order Placed Successful")
+                Swal.fire("Message sent successful!").then(() => {
+                window.location.href = "checkout.html"
+               })
+                
         }
 
             function getCart() {
