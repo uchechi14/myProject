@@ -44,7 +44,7 @@ const UserLogin = (event) =>{
 
     if (loginUser && loginUser.email === loginEmail && loginUser.password === loginPassword) {
         swal.fire({
-            title: "Registration Successful",
+            title: "Login Successful",
             icon: "success",
             confirmButtonText: "OK"
             }).then(() => {
